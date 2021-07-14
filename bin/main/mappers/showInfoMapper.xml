@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="web_movie_proj.mapper.ShowInfoMapper">
+	
+	<resultMap type="ShowInfo" id="resShowInfo">
+		<id column="shw_no" property="shwNo" />
+		<result column="shw_date" property="shwDate" />
+		<result column="shw_starttime" property="shwStarttime" jdbcType="TIMESTAMP"/>
+		<result column="shw_endtime" property="shwEndtime" jdbcType="TIMESTAMP"/>
+		<association property="thtNo" javaType="Theater"></association>
+		<association property="cinNo" javaType="Cinema"></association>
+		<association property="movNo" javaType="Movie"></association>
+	</resultMap>
+	
+	<select id="selectShowInfoAll" resultMap="resShowInfo">
+		select shw_no, shw_date, shw_starttime, shw_endtime, 
+			tht_no, tht_name, 
+			cin_no, cin_row, cin_col, cin_seat, cin_type, cin_adultprice, cin_teenprice, cin_prefprice, 
+			mov_no, mov_title
+		from vw_full_showinfo 
+		order by shw_no desc
+	</select>
+	
+	<select id="selectShowInfoByNo" resultMap="resShowInfo">
+		select shw_no, shw_date, shw_starttime, shw_endtime, 
+			tht_no, tht_name, 
+			cin_no, cin_row, cin_col, cin_seat, cin_type, cin_adultprice, cin_teenprice, cin_prefprice, 
+			mov_no, mov_title
+		from vw_full_showinfo
+		where shw_no = #{shwNo}
+	</select>
+	
+	<insert id="insertShowInfo">
+		insert into showinfo values 
+ 		(null, #{thtNo.thtNo}, #{cinNo.cinNo}, #{movNo.movNo}, #{shwDate}, #{shwStarttime}, 
+		addtime(#{shwStarttime}, sec_to_time((select mov_runtime from movie where mov_no = #{movNo.movNo}) * 60)))
+		<selectKey keyProperty="shwNo" resultType="int">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+	
+	<update id="updateShowInfo">
+		update showinfo 
+		set tht_no = #{thtNo.thtNo}, 
+			cin_no = #{cinNo.cinNo}, 
+			mov_no = #{movNo.movNo}, 
+			shw_date = #{shwDate}, 
+			shw_starttime = #{shwStarttime}, 
+			shw_endtime = #{shwEndtime} 
+		where shw_no = #{shwNo}
+	</update>
+	
+	<delete id="deleteShowInfo">
+		delete from showinfo 
+		where shw_no = #{shwNo}
+	</delete>
+	
+	<select id="selectShowInfoByCondition" resultMap="resShowInfo">
+		select shw_no, shw_date, shw_starttime, shw_endtime, tht_no, tht_name, cin_no, cin_type, mov_no, mov_title
+		from vw_full_showinfo
+		<where>
+			shw_starttime &gt; if (#{shwDate} > now(), 0, now())
+			<if test="shwDate != null">
+				and shw_date = #{shwDate}
+			</if>
+			<if test="movNo != null">
+				and mov_no = #{movNo.movNo}
+			</if>
+			<if test="thtNo != null">
+				and tht_no = #{thtNo.thtNo}
+			</if>
+			<if test="shwStarttime != null">
+				and shw_starttime = #{shwStarttime}
+			</if>
+		</where>
+		order by cin_no asc, shw_starttime asc;
+	</select>
+	
+	<select id="selectShowInfoListByTheater" resultMap="resShowInfo">
+		select s.shw_no, s.shw_date, s.shw_starttime, 
+			t.tht_no, t.tht_name, 
+			c.cin_no, c.cin_seat, c.cin_type,
+			m.mov_no, m.mov_title, m.mov_grade, m.mov_runtime
+		from showinfo s join theater t on s.tht_no = t.tht_no 
+			join cinema c on s.cin_no = c.cin_no  
+			join movie m on s.mov_no = m.mov_no
+		<where>
+			shw_starttime &gt; if (#{shwDate} > now(), 0, now())
+			<if test="shwDate != null">
+				and s.shw_date = #{shwDate}
+			</if>
+			<if test="movNo != null">
+				and m.mov_no = #{movNo.movNo}
+			</if>
+			<if test="thtNo != null">
+				and t.tht_no = #{thtNo.thtNo}
+			</if>
+			<if test="shwStarttime != null">
+				and s.shw_starttime = #{shwStarttime}
+			</if>
+		</where>
+		order by mov_no, cin_no, shw_starttime;
+	</select>
+	
+	<select id="selectTimeListByCondition" resultMap="resShowInfo">
+		select distinct shw_starttime
+		from vw_full_showinfo
+		<where>
+			<if test="shwDate != null">
+				and shw_date = #{shwDate}
+			</if>
+			<if test="cinNo != null">
+				and cin_no = #{cinNo.cinNo}
+			</if>
+			<if test="thtNo != null">
+				and tht_no = #{thtNo.thtNo}
+			</if>
+		</where>
+		order by shw_starttime
+	</select>
+</mapper>

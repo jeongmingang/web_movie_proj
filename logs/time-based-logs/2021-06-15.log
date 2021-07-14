@@ -1,0 +1,204 @@
+[DEBUG] [2021-06-15 09:47] test01selectMemberByAll()
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: select mem_no, mem_email, mem_passwd, mem_birthdate, mem_name, mem_phone from member
+[DEBUG] [2021-06-15 09:47] ==> Parameters: 
+[TRACE] [2021-06-15 09:47] <==    Columns: mem_no, mem_email, mem_passwd, mem_birthdate, mem_name, mem_phone
+[TRACE] [2021-06-15 09:47] <==        Row: 1, test@test.com, *A4B6157319038724E3560894F7F932C8886EBFCF, 2000-03-15, 테스트, 010-3343-0343
+[DEBUG] [2021-06-15 09:47] <==      Total: 1
+[DEBUG] [2021-06-15 09:47] Member [memNo=1, memEmail=test@test.com, memPasswd=*A4B6157319038724E3560894F7F932C8886EBFCF, memBirthdate=2000-03-15, memName=테스트, memPhone=010-3343-0343]
+[DEBUG] [2021-06-15 09:47] test02selectMemberByNo()
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: select mem_no, mem_email, mem_passwd, mem_birthdate, mem_name, mem_phone from member where mem_no = ?
+[DEBUG] [2021-06-15 09:47] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-15 09:47] <==    Columns: mem_no, mem_email, mem_passwd, mem_birthdate, mem_name, mem_phone
+[TRACE] [2021-06-15 09:47] <==        Row: 1, test@test.com, *A4B6157319038724E3560894F7F932C8886EBFCF, 2000-03-15, 테스트, 010-3343-0343
+[DEBUG] [2021-06-15 09:47] <==      Total: 1
+[DEBUG] [2021-06-15 09:47] Member [memNo=1, memEmail=test@test.com, memPasswd=*A4B6157319038724E3560894F7F932C8886EBFCF, memBirthdate=2000-03-15, memName=테스트, memPhone=010-3343-0343]
+[DEBUG] [2021-06-15 09:47] test03selectMemberByEmail()
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: select mem_no, mem_email, mem_passwd, mem_birthdate, mem_name, mem_phone from member where mem_email = ?
+[DEBUG] [2021-06-15 09:47] ==> Parameters: test1@test.com(String)
+[DEBUG] [2021-06-15 09:47] <==      Total: 0
+[DEBUG] [2021-06-15 09:47] test04insertMember()
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: insert into member values (null, ?, password(?), ?, ?, ?)
+[DEBUG] [2021-06-15 09:47] ==> Parameters: test4@test.com(String), 1234(String), 2020-07-04(LocalDate), 테스트4(String), 010-3343-0343(String)
+[DEBUG] [2021-06-15 09:47] <==    Updates: 1
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: SELECT LAST_INSERT_ID()
+[DEBUG] [2021-06-15 09:47] ==> Parameters: 
+[TRACE] [2021-06-15 09:47] <==    Columns: LAST_INSERT_ID()
+[TRACE] [2021-06-15 09:47] <==        Row: 2
+[DEBUG] [2021-06-15 09:47] <==      Total: 1
+[DEBUG] [2021-06-15 09:47] res id >> 1
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: delete from member where mem_email = ?
+[DEBUG] [2021-06-15 09:47] ==> Parameters: test4@test.com(String)
+[DEBUG] [2021-06-15 09:47] <==    Updates: 1
+[DEBUG] [2021-06-15 09:47] test05updateMember()
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: insert into member values (null, ?, password(?), ?, ?, ?)
+[DEBUG] [2021-06-15 09:47] ==> Parameters: test4_2@test.com(String), 1234(String), 2020-06-22(LocalDate), 테스트4_2(String), 010-2231-3232(String)
+[DEBUG] [2021-06-15 09:47] <==    Updates: 1
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: SELECT LAST_INSERT_ID()
+[DEBUG] [2021-06-15 09:47] ==> Parameters: 
+[TRACE] [2021-06-15 09:47] <==    Columns: LAST_INSERT_ID()
+[TRACE] [2021-06-15 09:47] <==        Row: 3
+[DEBUG] [2021-06-15 09:47] <==      Total: 1
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: update member set mem_email = ?, mem_passwd = ?, mem_birthdate = ?, mem_name = ?, mem_phone = ? where mem_no = ?
+[DEBUG] [2021-06-15 09:47] ==> Parameters: test4_2@test.com(String), 1122(String), 2020-06-22(LocalDate), 테스트4_2(String), 010-2231-3232(String), 3(Integer)
+[DEBUG] [2021-06-15 09:47] <==    Updates: 1
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: delete from member where mem_email = ?
+[DEBUG] [2021-06-15 09:47] ==> Parameters: test4_2@test.com(String)
+[DEBUG] [2021-06-15 09:47] <==    Updates: 1
+[DEBUG] [2021-06-15 09:47] test06deleteMember()
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: insert into member values (null, ?, password(?), ?, ?, ?)
+[DEBUG] [2021-06-15 09:47] ==> Parameters: test4_2@test.com(String), 1122(String), 2020-06-22(LocalDate), 테스트4_2(String), 010-2231-3232(String)
+[DEBUG] [2021-06-15 09:47] <==    Updates: 1
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: SELECT LAST_INSERT_ID()
+[DEBUG] [2021-06-15 09:47] ==> Parameters: 
+[TRACE] [2021-06-15 09:47] <==    Columns: LAST_INSERT_ID()
+[TRACE] [2021-06-15 09:47] <==        Row: 4
+[DEBUG] [2021-06-15 09:47] <==      Total: 1
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: delete from member where mem_email = ?
+[DEBUG] [2021-06-15 09:47] ==> Parameters: test4_2@test.com(String)
+[DEBUG] [2021-06-15 09:47] <==    Updates: 1
+[DEBUG] [2021-06-15 09:47] test01InsertNotice()
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: insert into notice(not_title,not_detail,not_date,not_file) values(?,?,now(),?);
+[DEBUG] [2021-06-15 09:47] ==> Parameters: inserttest 글(String), inserttest 글 세부내용(String), inserttest 글 파일 경로(String)
+[DEBUG] [2021-06-15 09:47] <==    Updates: 1
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: select max(not_no) from notice;
+[DEBUG] [2021-06-15 09:47] ==> Parameters: 
+[TRACE] [2021-06-15 09:47] <==    Columns: max(not_no)
+[TRACE] [2021-06-15 09:47] <==        Row: 3
+[DEBUG] [2021-06-15 09:47] <==      Total: 1
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: alter table notice auto_increment = 1;
+[DEBUG] [2021-06-15 09:47] ==> Parameters: 
+[DEBUG] [2021-06-15 09:47] <==    Updates: 0
+[DEBUG] [2021-06-15 09:47] test03SelectNoticeAll()
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: select not_no, not_title, not_date from notice;
+[DEBUG] [2021-06-15 09:47] ==> Parameters: 
+[TRACE] [2021-06-15 09:47] <==    Columns: not_no, not_title, not_date
+[TRACE] [2021-06-15 09:47] <==        Row: 1, 테스트 공지, 2021-06-10 11:51:20.0
+[TRACE] [2021-06-15 09:47] <==        Row: 2, inserttest 글, 2021-06-11 11:16:04.0
+[TRACE] [2021-06-15 09:47] <==        Row: 3, inserttest 글, 2021-06-15 09:47:28.0
+[DEBUG] [2021-06-15 09:47] <==      Total: 3
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: alter table notice auto_increment = 1;
+[DEBUG] [2021-06-15 09:47] ==> Parameters: 
+[DEBUG] [2021-06-15 09:47] <==    Updates: 0
+[DEBUG] [2021-06-15 09:47] test04UpdateNotice()
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: update notice set not_title = ? , not_detail = ? , not_file = ? where not_no = ?;
+[DEBUG] [2021-06-15 09:47] ==> Parameters: inserttest 글 수정(String), inserttest 글 세부내용 수정(String), inserttest 글 파일 경로 수정(String), 4(Integer)
+[DEBUG] [2021-06-15 09:47] <==    Updates: 0
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: alter table notice auto_increment = 1;
+[DEBUG] [2021-06-15 09:47] ==> Parameters: 
+[DEBUG] [2021-06-15 09:47] <==    Updates: 0
+[DEBUG] [2021-06-15 09:47] test05SelectNoticeByNo()
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: select not_no, not_title, not_detail, not_date, not_file from notice where not_no = ?;
+[DEBUG] [2021-06-15 09:47] ==> Parameters: 4(Integer)
+[DEBUG] [2021-06-15 09:47] <==      Total: 0
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: alter table notice auto_increment = 1;
+[DEBUG] [2021-06-15 09:47] ==> Parameters: 
+[DEBUG] [2021-06-15 09:47] <==    Updates: 0
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: delete from notice where not_no = ?;
+[DEBUG] [2021-06-15 09:47] ==> Parameters: 4(Integer)
+[DEBUG] [2021-06-15 09:47] <==    Updates: 0
+[DEBUG] [2021-06-15 09:47] ==>  Preparing: alter table notice auto_increment = 1;
+[DEBUG] [2021-06-15 09:47] ==> Parameters: 
+[DEBUG] [2021-06-15 09:47] <==    Updates: 0
+[DEBUG] [2021-06-15 09:48] test01GetLists()
+[DEBUG] [2021-06-15 09:48] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no
+[DEBUG] [2021-06-15 09:48] ==> Parameters: 
+[DEBUG] [2021-06-15 09:48] test02GetCommentByUser()
+[DEBUG] [2021-06-15 09:48] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no where c.com_user = ?
+[DEBUG] [2021-06-15 09:48] ==> Parameters: test1@test.com(String)
+[DEBUG] [2021-06-15 09:48] test03RegistComment()
+[DEBUG] [2021-06-15 09:48] ==>  Preparing: insert into comment values (null, ?, ?, ?, ?, now())
+[DEBUG] [2021-06-15 09:48] ==> Parameters: 1(Integer), 테스트유저(String), 테스트(String), 3(Integer)
+[DEBUG] [2021-06-15 09:48] test04ModifyComment()
+[DEBUG] [2021-06-15 09:48] ==>  Preparing: update comment set mov_no = ?, com_user = ?, com_content = ?, com_star = ?, com_date = now() where com_no = ?
+[DEBUG] [2021-06-15 09:48] ==> Parameters: 2(Integer), 테스트유저2(String), 테스트2(String), 4(Integer), 0(Integer)
+[DEBUG] [2021-06-15 09:48] test05RemoveComment()
+[DEBUG] [2021-06-15 09:48] ==>  Preparing: delete from comment where com_no = ?
+[DEBUG] [2021-06-15 09:48] ==> Parameters: 0(Integer)
+[DEBUG] [2021-06-15 09:49] test01GetLists()
+[DEBUG] [2021-06-15 09:49] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no
+[DEBUG] [2021-06-15 09:49] ==> Parameters: 
+[DEBUG] [2021-06-15 09:49] <==      Total: 0
+[DEBUG] [2021-06-15 09:49] test02GetCommentByUser()
+[DEBUG] [2021-06-15 09:49] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no where c.com_user = ?
+[DEBUG] [2021-06-15 09:49] ==> Parameters: test1@test.com(String)
+[DEBUG] [2021-06-15 09:49] <==      Total: 0
+[DEBUG] [2021-06-15 09:49] test03RegistComment()
+[DEBUG] [2021-06-15 09:49] ==>  Preparing: insert into comment values (null, ?, ?, ?, ?, now())
+[DEBUG] [2021-06-15 09:49] ==> Parameters: 1(Integer), 테스트유저(String), 테스트(String), 3(Integer)
+[DEBUG] [2021-06-15 09:49] <==    Updates: 1
+[DEBUG] [2021-06-15 09:49] ==>  Preparing: SELECT LAST_INSERT_ID()
+[DEBUG] [2021-06-15 09:49] ==> Parameters: 
+[TRACE] [2021-06-15 09:49] <==    Columns: LAST_INSERT_ID()
+[TRACE] [2021-06-15 09:49] <==        Row: 1
+[DEBUG] [2021-06-15 09:49] <==      Total: 1
+[DEBUG] [2021-06-15 09:49] res no >> 1
+[DEBUG] [2021-06-15 09:49] test04ModifyComment()
+[DEBUG] [2021-06-15 09:49] ==>  Preparing: update comment set mov_no = ?, com_user = ?, com_content = ?, com_star = ?, com_date = now() where com_no = ?
+[DEBUG] [2021-06-15 09:49] ==> Parameters: 2(Integer), 테스트유저2(String), 테스트2(String), 4(Integer), 1(Integer)
+[DEBUG] [2021-06-15 09:49] <==    Updates: 1
+[DEBUG] [2021-06-15 09:49] res no >> 1
+[DEBUG] [2021-06-15 09:49] test05RemoveComment()
+[DEBUG] [2021-06-15 09:49] ==>  Preparing: delete from comment where com_no = ?
+[DEBUG] [2021-06-15 09:49] ==> Parameters: 1(Integer)
+[DEBUG] [2021-06-15 09:49] <==    Updates: 1
+[DEBUG] [2021-06-15 09:49] res no >> 1
+[DEBUG] [2021-06-15 09:50] test01GetLists()
+[DEBUG] [2021-06-15 09:50] ==>  Preparing: select res_no, shw_no, mem_no, res_price, res_date, res_adult, res_teen, res_pref from reservation
+[DEBUG] [2021-06-15 09:50] ==> Parameters: 
+[DEBUG] [2021-06-15 09:50] <==      Total: 0
+[DEBUG] [2021-06-15 09:50] test02GetReservationByUser()
+[DEBUG] [2021-06-15 09:50] ==>  Preparing: select res_no, shw_no, mem_no, res_price, res_date, res_adult, res_teen, res_pref from reservation where mem_no = ?
+[DEBUG] [2021-06-15 09:50] ==> Parameters: 1(Integer)
+[DEBUG] [2021-06-15 09:50] <==      Total: 0
+[DEBUG] [2021-06-15 09:50] test03RegistReservation()
+[DEBUG] [2021-06-15 09:50] ==>  Preparing: insert into reservation values (null, ?, ?, ?, now(), ?, ?, ?)
+[DEBUG] [2021-06-15 09:50] ==> Parameters: 2(Integer), 2(Integer), 23000(Integer), 1(Integer), 1(Integer), 1(Integer)
+[DEBUG] [2021-06-15 09:50] test04RemoveReservation()
+[DEBUG] [2021-06-15 09:50] ==>  Preparing: delete from reservation where res_no = ?
+[DEBUG] [2021-06-15 09:50] ==> Parameters: 0(Integer)
+[DEBUG] [2021-06-15 09:50] <==    Updates: 0
+[DEBUG] [2021-06-15 09:51] test01GetLists()
+[DEBUG] [2021-06-15 09:51] ==>  Preparing: select res_no, shw_no, mem_no, res_price, res_date, res_adult, res_teen, res_pref from reservation
+[DEBUG] [2021-06-15 09:51] ==> Parameters: 
+[DEBUG] [2021-06-15 09:51] <==      Total: 0
+[DEBUG] [2021-06-15 09:51] test02GetReservationByUser()
+[DEBUG] [2021-06-15 09:51] ==>  Preparing: select res_no, shw_no, mem_no, res_price, res_date, res_adult, res_teen, res_pref from reservation where mem_no = ?
+[DEBUG] [2021-06-15 09:51] ==> Parameters: 1(Integer)
+[DEBUG] [2021-06-15 09:51] <==      Total: 0
+[DEBUG] [2021-06-15 09:51] test03RegistReservation()
+[DEBUG] [2021-06-15 09:51] ==>  Preparing: insert into reservation values (null, ?, ?, ?, now(), ?, ?, ?)
+[DEBUG] [2021-06-15 09:51] ==> Parameters: 2(Integer), 2(Integer), 23000(Integer), 1(Integer), 1(Integer), 1(Integer)
+[DEBUG] [2021-06-15 09:51] test04RemoveReservation()
+[DEBUG] [2021-06-15 09:51] ==>  Preparing: delete from reservation where res_no = ?
+[DEBUG] [2021-06-15 09:51] ==> Parameters: 0(Integer)
+[DEBUG] [2021-06-15 09:51] <==    Updates: 0
+[DEBUG] [2021-06-15 10:42] test01GetLists()
+[DEBUG] [2021-06-15 10:42] ==>  Preparing: select res_no, shw_no, mem_no, res_price, res_date, res_adult, res_teen, res_pref from reservation
+[DEBUG] [2021-06-15 10:42] ==> Parameters: 
+[DEBUG] [2021-06-15 10:42] <==      Total: 0
+[DEBUG] [2021-06-15 10:42] test02GetReservationByUser()
+[DEBUG] [2021-06-15 10:42] ==>  Preparing: select res_no, shw_no, mem_no, res_price, res_date, res_adult, res_teen, res_pref from reservation where mem_no = ?
+[DEBUG] [2021-06-15 10:42] ==> Parameters: 1(Integer)
+[DEBUG] [2021-06-15 10:42] <==      Total: 0
+[DEBUG] [2021-06-15 10:42] test03RegistReservation()
+[DEBUG] [2021-06-15 10:42] ==>  Preparing: insert into reservation values (null, ?, ?, ?, now(), ?, ?, ?)
+[DEBUG] [2021-06-15 10:42] ==> Parameters: 2(Integer), 2(Integer), 23000(Integer), 1(Integer), 1(Integer), 1(Integer)
+[DEBUG] [2021-06-15 10:42] test04RemoveReservation()
+[DEBUG] [2021-06-15 10:42] ==>  Preparing: delete from reservation where res_no = ?
+[DEBUG] [2021-06-15 10:42] ==> Parameters: 0(Integer)
+[DEBUG] [2021-06-15 10:42] <==    Updates: 0
+[DEBUG] [2021-06-15 10:50] test01GetLists()
+[DEBUG] [2021-06-15 10:50] ==>  Preparing: select res_no, shw_no, mem_no, res_price, res_date, res_adult, res_teen, res_pref from reservation
+[DEBUG] [2021-06-15 10:50] ==> Parameters: 
+[DEBUG] [2021-06-15 10:50] <==      Total: 0
+[DEBUG] [2021-06-15 10:50] test02GetReservationByUser()
+[DEBUG] [2021-06-15 10:50] ==>  Preparing: select res_no, shw_no, mem_no, res_price, res_date, res_adult, res_teen, res_pref from reservation where mem_no = ?
+[DEBUG] [2021-06-15 10:50] ==> Parameters: 1(Integer)
+[DEBUG] [2021-06-15 10:50] <==      Total: 0
+[DEBUG] [2021-06-15 10:50] test03RegistReservation()
+[DEBUG] [2021-06-15 10:50] ==>  Preparing: insert into reservation values (null, ?, ?, ?, now(), ?, ?, ?)
+[DEBUG] [2021-06-15 10:50] ==> Parameters: 2(Integer), 2(Integer), 23000(Integer), 1(Integer), 1(Integer), 1(Integer)
+[DEBUG] [2021-06-15 10:50] test04RemoveReservation()
+[DEBUG] [2021-06-15 10:50] ==>  Preparing: delete from reservation where res_no = ?
+[DEBUG] [2021-06-15 10:50] ==> Parameters: 0(Integer)
+[DEBUG] [2021-06-15 10:50] <==    Updates: 0

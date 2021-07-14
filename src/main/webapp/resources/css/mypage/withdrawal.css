@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'IBMPlexSansKR-Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import
+	url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css')
+	;
+
+@font-face {
+	font-family: 'IBMPlexSansKR-Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* body */
+body {
+	font-family: 'IBMPlexSansKR-Regular', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	/* 	background-color: RGB(3, 22, 52); */
+}
+
+/* section */
+section {
+	margin: 50px auto;
+	width: 1300px;
+	height: 900px;
+	text-align: center;
+	/* 	border: 1px solid green; */
+}
+
+#container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#mypage-menubar {
+	border-right: 1px solid #ccc;
+	display: inline-block;
+	width: 250px;
+	height: 900px;
+	/* 	float: left; */
+}
+
+#mypage-menubar ul {
+	padding: 0px;
+	list-style: none;
+	text-align: left;
+}
+
+#mypage-menubar ul li {
+	margin: 50px 0;
+}
+
+#mypage-menubar ul li a {
+	color: RGB(3, 22, 52);
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+#mypage-menubar ul li a:hover {
+	color: red;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+#mypage-menubar h2 {
+	background-color: RGB(3, 22, 52);
+	color: white;
+}
+
+.active-menu {
+	font-weight: 900;
+	border-bottom: 2px solid RGB(3, 22, 52);
+}
+
+#mypage-wrap {
+	/* 	border: 1px solid yellow; */
+	width: 1045px;
+	height: 100%;
+}
+
+#mypage-wrap h2 {
+	text-align: left;
+	margin-left: 40px;
+	margin-bottom: 40px;
+}
+
+#titlearea {
+	margin-right: 50px;
+}
+
+#textarea h2 {
+	margin-bottom: 5px;
+	margin-left: 270px;
+}
+
+#textarea span {
+	margin-bottom: 0;
+	font-size: large;
+}
+
+.fa-square {
+	color: RGB(3, 22, 52);
+	float: left;
+	margin-left: 250px;
+	margin-top: 10px;
+}
+
+#passwordarea {
+	margin: 50px auto;
+}
+
+#passwordarea label {
+	display: inline-block;
+	width: 150px;
+	text-align: left;
+	font-size: 1.2em;
+}
+
+#passwordarea input {
+	display: inline-block;
+	width: 240px;
+	height: 35px;
+	padding-left: 10px;
+}
+
+#button-group {
+	height: 90px;
+}
+
+#button-group #cancel {
+	height: 45px;
+	width: 180px;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 10px;
+	background-color: RGB(3, 22, 52);
+	color: #fff;
+	font-weight: 500 bolder;
+	border: 0 solid #fff;
+	border-radius: 7px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#button-group #delete {
+	height: 45px;
+	width: 180px;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 10px;
+	background-color: #fff;
+	color: #000;
+	font-weight: 500 bolder;
+	border: 1px solid RGB(3, 22, 52);
+	border-radius: 7px;
+	font-weight: bold;
+	cursor: pointer;
+}

@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'IBMPlexSansKR-Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* body */
+body {
+	font-family: 'IBMPlexSansKR-Regular', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+/* section */
+section {
+	margin: 50px auto;
+	width: 1300px;
+	height: 900px;
+	text-align: center;
+}
+
+#container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#mypage-menubar {
+	border-right: 1px solid #ccc;
+	display: inline-block;
+	width: 250px;
+	height: 900px;
+}
+
+#mypage-menubar ul {
+	padding: 0px;
+	list-style: none;
+	text-align: left;
+}
+
+#mypage-menubar ul li {
+	margin: 50px 0;
+}
+
+#mypage-menubar ul li a {
+	color: RGB(3, 22, 52);
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+#mypage-menubar ul li a:hover {
+	color: red;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+#mypage-menubar h2 {
+	background-color: RGB(3, 22, 52);
+	color: white;
+}
+
+.active-menu {
+	font-weight: 900;
+	border-bottom: 2px solid RGB(3, 22, 52);
+}
+
+#myinfo-wrap {
+	width: 1045px;
+	height: 100%;
+}
+
+#myinfo-wrap h2 {
+	text-align: left;
+	margin-left: 40px;
+	margin-bottom: 40px;
+}
+
+#myinfo-wrap h3 {
+	text-align: left;
+	margin-left: 40px;
+	margin-bottom: 20px;
+}
+
+#myinfo-table {
+	margin-left: 40px;
+	text-align: center;
+	width: 900px;
+	border-collapse: collapse;
+	border-bottom: 1px solid #ccc;
+	border-top: 2px solid RGB(3, 22, 52);
+	text-align: left;
+}
+
+#myinfo-table th {
+	padding: 10px 20px;
+	background-color: RGB(247, 247, 247);
+	border-top: 1px solid #ccc;
+}
+
+#myinfo-table td {
+	padding: 10px;
+	width: 650px;
+	height: 35px;
+	border-top: 1px solid #ccc;
+}
+
+#myinfo-table input {
+	height: 27px;
+	width: 300px;
+	padding: 0 10px;
+}
+
+#button-group {
+	height: 90px;
+}
+
+#myinfo-table .pwchange {
+	height: 31px;
+	width: 140px;
+	text-align: center;
+	background-color: #fff;
+	color: #000;
+	font-weight: 500 bolder;
+	border: 1px solid RGB(3, 22, 52);
+	font-weight: bold;
+}
+
+#button-group #cancel {
+	height: 45px;
+	width: 180px;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 10px;
+	background-color: RGB(3, 22, 52);
+	color: #fff;
+	font-weight: 500 bolder;
+	border: 0 solid #fff;
+	border-radius: 7px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#button-group #confirm {
+	height: 45px;
+	width: 180px;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 10px;
+	background-color: #fff;
+	color: #000;
+	font-weight: 500 bolder;
+	border: 1px solid RGB(3, 22, 52);
+	border-radius: 7px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+input[readonly="readonly"] {
+    background-color: #ebecef;
+}

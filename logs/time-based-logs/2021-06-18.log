@@ -1,0 +1,272 @@
+[DEBUG] [2021-06-18 14:32] test01GetLists()
+[DEBUG] [2021-06-18 14:32] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no
+[DEBUG] [2021-06-18 14:32] ==> Parameters: 
+[TRACE] [2021-06-18 14:32] <==    Columns: com_no, mov_no, mov_title, com_user, com_content, com_star, com_date
+[TRACE] [2021-06-18 14:32] <==        Row: 1, 1, 크루엘라, test@test.com, 재미있음, 4, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 14:32] <==        Row: 2, 1, 크루엘라, test2@test.com, 그저그럼, 3, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 14:32] <==        Row: 3, 1, 크루엘라, test@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 14:32] <==        Row: 4, 1, 크루엘라, test1@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 14:32] <==        Row: 5, 2, 캐시트럭, test@test.com, 재미있음2, 5, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 14:32] <==        Row: 6, 2, 캐시트럭, test@test.com, 그저그럼2, 3, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 14:32] <==        Row: 7, 2, 캐시트럭, test2@test.com, 노잼2, 2, 2021-06-17 12:36:33.0
+[DEBUG] [2021-06-18 14:32] <==      Total: 7
+[DEBUG] [2021-06-18 14:32] Comment [comNo=1, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=재미있음, comStar=4, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 14:32] Comment [comNo=2, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test2@test.com, comContent=그저그럼, comStar=3, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 14:32] Comment [comNo=3, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 14:32] Comment [comNo=4, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test1@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 14:32] Comment [comNo=5, movNo=Movie [movNo=2, movTitle=캐시트럭, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=재미있음2, comStar=5, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 14:32] Comment [comNo=6, movNo=Movie [movNo=2, movTitle=캐시트럭, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=그저그럼2, comStar=3, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 14:32] Comment [comNo=7, movNo=Movie [movNo=2, movTitle=캐시트럭, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test2@test.com, comContent=노잼2, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 14:32] test02GetCommentByUser()
+[DEBUG] [2021-06-18 14:32] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no where c.com_user = ?
+[DEBUG] [2021-06-18 14:32] ==> Parameters: test1@test.com(String)
+[TRACE] [2021-06-18 14:32] <==    Columns: com_no, mov_no, mov_title, com_user, com_content, com_star, com_date
+[TRACE] [2021-06-18 14:32] <==        Row: 4, 1, 크루엘라, test1@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[DEBUG] [2021-06-18 14:32] <==      Total: 1
+[DEBUG] [2021-06-18 14:32] Comment [comNo=4, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test1@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 14:32] test03GetCommentByMovNo()
+[DEBUG] [2021-06-18 14:32] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no where m.mov_no = ?
+[DEBUG] [2021-06-18 14:32] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-18 14:32] <==    Columns: com_no, mov_no, mov_title, com_user, com_content, com_star, com_date
+[TRACE] [2021-06-18 14:32] <==        Row: 1, 1, 크루엘라, test@test.com, 재미있음, 4, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 14:32] <==        Row: 2, 1, 크루엘라, test2@test.com, 그저그럼, 3, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 14:32] <==        Row: 3, 1, 크루엘라, test@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 14:32] <==        Row: 4, 1, 크루엘라, test1@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[DEBUG] [2021-06-18 14:32] <==      Total: 4
+[DEBUG] [2021-06-18 14:32] Comment [comNo=1, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=재미있음, comStar=4, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 14:32] Comment [comNo=2, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test2@test.com, comContent=그저그럼, comStar=3, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 14:32] Comment [comNo=3, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 14:32] Comment [comNo=4, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test1@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 14:32] test04GetCommentAvgStar()
+[DEBUG] [2021-06-18 14:32] ==>  Preparing: select round(avg(com_star), 1) from comment c join movie m on c.mov_no = m.mov_no where m.mov_no = ?
+[DEBUG] [2021-06-18 14:32] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-18 14:32] <==    Columns: round(avg(com_star), 1)
+[TRACE] [2021-06-18 14:32] <==        Row: 3.3
+[DEBUG] [2021-06-18 14:32] <==      Total: 1
+[DEBUG] [2021-06-18 14:32] Comment [comNo=0, movNo=Movie [movNo=2, movTitle=null, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=null, comContent=null, comStar=0, comDate=null]
+[DEBUG] [2021-06-18 14:32] test05RegistComment()
+[DEBUG] [2021-06-18 14:32] ==>  Preparing: insert into comment values (null, ?, ?, ?, ?, now())
+[DEBUG] [2021-06-18 14:32] ==> Parameters: 1(Integer), 테스트유저(String), 테스트(String), 3(Integer)
+[DEBUG] [2021-06-18 14:32] <==    Updates: 1
+[DEBUG] [2021-06-18 14:32] ==>  Preparing: SELECT LAST_INSERT_ID()
+[DEBUG] [2021-06-18 14:32] ==> Parameters: 
+[TRACE] [2021-06-18 14:32] <==    Columns: LAST_INSERT_ID()
+[TRACE] [2021-06-18 14:32] <==        Row: 56
+[DEBUG] [2021-06-18 14:32] <==      Total: 1
+[DEBUG] [2021-06-18 14:32] res no >> 1
+[DEBUG] [2021-06-18 14:32] test06ModifyComment()
+[DEBUG] [2021-06-18 14:32] ==>  Preparing: update comment set mov_no = ?, com_user = ?, com_content = ?, com_star = ?, com_date = now() where com_no = ?
+[DEBUG] [2021-06-18 14:32] ==> Parameters: 2(Integer), 테스트유저2(String), 테스트2(String), 4(Integer), 56(Integer)
+[DEBUG] [2021-06-18 14:32] <==    Updates: 1
+[DEBUG] [2021-06-18 14:32] res no >> 1
+[DEBUG] [2021-06-18 14:32] test07RemoveComment()
+[DEBUG] [2021-06-18 14:32] ==>  Preparing: delete from comment where com_no = ?
+[DEBUG] [2021-06-18 14:32] ==> Parameters: 56(Integer)
+[DEBUG] [2021-06-18 14:32] <==    Updates: 1
+[DEBUG] [2021-06-18 14:32] res no >> 1
+[DEBUG] [2021-06-18 15:42] test01GetLists()
+[DEBUG] [2021-06-18 15:42] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no
+[DEBUG] [2021-06-18 15:42] ==> Parameters: 
+[TRACE] [2021-06-18 15:42] <==    Columns: com_no, mov_no, mov_title, com_user, com_content, com_star, com_date
+[TRACE] [2021-06-18 15:42] <==        Row: 1, 1, 크루엘라, test@test.com, 재미있음, 4, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:42] <==        Row: 2, 1, 크루엘라, test2@test.com, 그저그럼, 3, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:42] <==        Row: 3, 1, 크루엘라, test@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:42] <==        Row: 4, 1, 크루엘라, test1@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:42] <==        Row: 5, 2, 캐시트럭, test@test.com, 재미있음2, 5, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:42] <==        Row: 6, 2, 캐시트럭, test@test.com, 그저그럼2, 3, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:42] <==        Row: 7, 2, 캐시트럭, test2@test.com, 노잼2, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:42] <==        Row: 58, 3, 컨저링3: 악마가 시켰다, test1@test.com, 재미없음 노잼, 2, 2021-06-18 15:16:35.0
+[DEBUG] [2021-06-18 15:42] <==      Total: 8
+[DEBUG] [2021-06-18 15:42] Comment [comNo=1, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=재미있음, comStar=4, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:42] Comment [comNo=2, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test2@test.com, comContent=그저그럼, comStar=3, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:42] Comment [comNo=3, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:42] Comment [comNo=4, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test1@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:42] Comment [comNo=5, movNo=Movie [movNo=2, movTitle=캐시트럭, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=재미있음2, comStar=5, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:42] Comment [comNo=6, movNo=Movie [movNo=2, movTitle=캐시트럭, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=그저그럼2, comStar=3, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:42] Comment [comNo=7, movNo=Movie [movNo=2, movTitle=캐시트럭, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test2@test.com, comContent=노잼2, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:42] Comment [comNo=58, movNo=Movie [movNo=3, movTitle=컨저링3: 악마가 시켰다, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test1@test.com, comContent=재미없음 노잼, comStar=2, comDate=2021-06-18T15:16:35]
+[DEBUG] [2021-06-18 15:42] test02GetCommentByUser()
+[DEBUG] [2021-06-18 15:42] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no where c.com_user = ?
+[DEBUG] [2021-06-18 15:42] ==> Parameters: test1@test.com(String)
+[TRACE] [2021-06-18 15:42] <==    Columns: com_no, mov_no, mov_title, com_user, com_content, com_star, com_date
+[TRACE] [2021-06-18 15:42] <==        Row: 4, 1, 크루엘라, test1@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:42] <==        Row: 58, 3, 컨저링3: 악마가 시켰다, test1@test.com, 재미없음 노잼, 2, 2021-06-18 15:16:35.0
+[DEBUG] [2021-06-18 15:42] <==      Total: 2
+[DEBUG] [2021-06-18 15:42] Comment [comNo=4, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test1@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:42] Comment [comNo=58, movNo=Movie [movNo=3, movTitle=컨저링3: 악마가 시켰다, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test1@test.com, comContent=재미없음 노잼, comStar=2, comDate=2021-06-18T15:16:35]
+[DEBUG] [2021-06-18 15:42] test03GetCommentByMovNo()
+[DEBUG] [2021-06-18 15:42] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no where m.mov_no = ?
+[DEBUG] [2021-06-18 15:42] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-18 15:42] <==    Columns: com_no, mov_no, mov_title, com_user, com_content, com_star, com_date
+[TRACE] [2021-06-18 15:42] <==        Row: 1, 1, 크루엘라, test@test.com, 재미있음, 4, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:42] <==        Row: 2, 1, 크루엘라, test2@test.com, 그저그럼, 3, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:42] <==        Row: 3, 1, 크루엘라, test@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:42] <==        Row: 4, 1, 크루엘라, test1@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[DEBUG] [2021-06-18 15:42] <==      Total: 4
+[DEBUG] [2021-06-18 15:42] Comment [comNo=1, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=재미있음, comStar=4, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:42] Comment [comNo=2, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test2@test.com, comContent=그저그럼, comStar=3, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:42] Comment [comNo=3, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:42] Comment [comNo=4, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test1@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:42] test04GetCommentAvgStar()
+[DEBUG] [2021-06-18 15:42] ==>  Preparing: select round(avg(com_star), 1) from comment c join movie m on c.mov_no = m.mov_no where m.mov_no = ?
+[DEBUG] [2021-06-18 15:42] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-18 15:42] <==    Columns: round(avg(com_star), 1)
+[TRACE] [2021-06-18 15:42] <==        Row: 3.3
+[DEBUG] [2021-06-18 15:42] <==      Total: 1
+[DEBUG] [2021-06-18 15:42] Comment [comNo=0, movNo=Movie [movNo=2, movTitle=null, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=null, comContent=null, comStar=0, comDate=null]
+[DEBUG] [2021-06-18 15:42] test05RegistComment()
+[DEBUG] [2021-06-18 15:42] ==>  Preparing: insert into comment values (null, ?, ?, ?, ?, now())
+[DEBUG] [2021-06-18 15:42] ==> Parameters: 1(Integer), 테스트유저(String), 테스트(String), 3(Integer)
+[DEBUG] [2021-06-18 15:42] <==    Updates: 1
+[DEBUG] [2021-06-18 15:42] ==>  Preparing: SELECT LAST_INSERT_ID()
+[DEBUG] [2021-06-18 15:42] ==> Parameters: 
+[TRACE] [2021-06-18 15:42] <==    Columns: LAST_INSERT_ID()
+[TRACE] [2021-06-18 15:42] <==        Row: 59
+[DEBUG] [2021-06-18 15:42] <==      Total: 1
+[DEBUG] [2021-06-18 15:42] res no >> 1
+[DEBUG] [2021-06-18 15:42] test06ModifyComment()
+[DEBUG] [2021-06-18 15:42] ==>  Preparing: update comment set mov_no = ?, com_user = ?, com_content = ?, com_star = ?, com_date = now() where com_no = ?
+[DEBUG] [2021-06-18 15:42] ==> Parameters: 2(Integer), 테스트유저2(String), 테스트2(String), 4(Integer), 59(Integer)
+[DEBUG] [2021-06-18 15:42] <==    Updates: 1
+[DEBUG] [2021-06-18 15:42] res no >> 1
+[DEBUG] [2021-06-18 15:42] test07RemoveComment()
+[DEBUG] [2021-06-18 15:42] ==>  Preparing: delete from comment where com_no = ?
+[DEBUG] [2021-06-18 15:42] ==> Parameters: 59(Integer)
+[DEBUG] [2021-06-18 15:42] <==    Updates: 1
+[DEBUG] [2021-06-18 15:42] res no >> 1
+[DEBUG] [2021-06-18 15:46] test01GetLists()
+[DEBUG] [2021-06-18 15:46] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no
+[DEBUG] [2021-06-18 15:46] ==> Parameters: 
+[TRACE] [2021-06-18 15:46] <==    Columns: com_no, mov_no, mov_title, com_user, com_content, com_star, com_date
+[TRACE] [2021-06-18 15:46] <==        Row: 1, 1, 크루엘라, test@test.com, 재미있음, 4, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:46] <==        Row: 2, 1, 크루엘라, test2@test.com, 그저그럼, 3, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:46] <==        Row: 3, 1, 크루엘라, test@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:46] <==        Row: 4, 1, 크루엘라, test1@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:46] <==        Row: 5, 2, 캐시트럭, test@test.com, 재미있음2, 5, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:46] <==        Row: 6, 2, 캐시트럭, test@test.com, 그저그럼2, 3, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:46] <==        Row: 7, 2, 캐시트럭, test2@test.com, 노잼2, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:46] <==        Row: 58, 3, 컨저링3: 악마가 시켰다, tes1@test.com, 나쁘지 않음, 2, 2021-06-18 15:45:31.0
+[DEBUG] [2021-06-18 15:46] <==      Total: 8
+[DEBUG] [2021-06-18 15:46] Comment [comNo=1, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=재미있음, comStar=4, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:46] Comment [comNo=2, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test2@test.com, comContent=그저그럼, comStar=3, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:46] Comment [comNo=3, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:46] Comment [comNo=4, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test1@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:46] Comment [comNo=5, movNo=Movie [movNo=2, movTitle=캐시트럭, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=재미있음2, comStar=5, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:46] Comment [comNo=6, movNo=Movie [movNo=2, movTitle=캐시트럭, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=그저그럼2, comStar=3, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:46] Comment [comNo=7, movNo=Movie [movNo=2, movTitle=캐시트럭, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test2@test.com, comContent=노잼2, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:46] Comment [comNo=58, movNo=Movie [movNo=3, movTitle=컨저링3: 악마가 시켰다, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=tes1@test.com, comContent=나쁘지 않음, comStar=2, comDate=2021-06-18T15:45:31]
+[DEBUG] [2021-06-18 15:46] test02GetCommentByUser()
+[DEBUG] [2021-06-18 15:46] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no where c.com_user = ?
+[DEBUG] [2021-06-18 15:46] ==> Parameters: test1@test.com(String)
+[TRACE] [2021-06-18 15:46] <==    Columns: com_no, mov_no, mov_title, com_user, com_content, com_star, com_date
+[TRACE] [2021-06-18 15:46] <==        Row: 4, 1, 크루엘라, test1@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[DEBUG] [2021-06-18 15:46] <==      Total: 1
+[DEBUG] [2021-06-18 15:46] Comment [comNo=4, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test1@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:46] test03GetCommentByMovNo()
+[DEBUG] [2021-06-18 15:46] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no where m.mov_no = ?
+[DEBUG] [2021-06-18 15:46] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-18 15:46] <==    Columns: com_no, mov_no, mov_title, com_user, com_content, com_star, com_date
+[TRACE] [2021-06-18 15:46] <==        Row: 1, 1, 크루엘라, test@test.com, 재미있음, 4, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:46] <==        Row: 2, 1, 크루엘라, test2@test.com, 그저그럼, 3, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:46] <==        Row: 3, 1, 크루엘라, test@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 15:46] <==        Row: 4, 1, 크루엘라, test1@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[DEBUG] [2021-06-18 15:46] <==      Total: 4
+[DEBUG] [2021-06-18 15:46] Comment [comNo=1, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=재미있음, comStar=4, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:46] Comment [comNo=2, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test2@test.com, comContent=그저그럼, comStar=3, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:46] Comment [comNo=3, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:46] Comment [comNo=4, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test1@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 15:46] test04GetCommentAvgStar()
+[DEBUG] [2021-06-18 15:46] ==>  Preparing: select round(avg(com_star), 1) from comment c join movie m on c.mov_no = m.mov_no where m.mov_no = ?
+[DEBUG] [2021-06-18 15:46] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-18 15:46] <==    Columns: round(avg(com_star), 1)
+[TRACE] [2021-06-18 15:46] <==        Row: 3.3
+[DEBUG] [2021-06-18 15:46] <==      Total: 1
+[DEBUG] [2021-06-18 15:46] Comment [comNo=0, movNo=Movie [movNo=2, movTitle=null, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=null, comContent=null, comStar=0, comDate=null]
+[DEBUG] [2021-06-18 15:46] test05RegistComment()
+[DEBUG] [2021-06-18 15:46] ==>  Preparing: insert into comment values (null, ?, ?, ?, ?, now())
+[DEBUG] [2021-06-18 15:46] ==> Parameters: 1(Integer), 테스트유저(String), 테스트(String), 3(Integer)
+[DEBUG] [2021-06-18 15:46] <==    Updates: 1
+[DEBUG] [2021-06-18 15:46] ==>  Preparing: SELECT LAST_INSERT_ID()
+[DEBUG] [2021-06-18 15:46] ==> Parameters: 
+[TRACE] [2021-06-18 15:46] <==    Columns: LAST_INSERT_ID()
+[TRACE] [2021-06-18 15:46] <==        Row: 60
+[DEBUG] [2021-06-18 15:46] <==      Total: 1
+[DEBUG] [2021-06-18 15:46] res no >> 1
+[DEBUG] [2021-06-18 15:46] test06ModifyComment()
+[DEBUG] [2021-06-18 15:46] ==>  Preparing: update comment set com_content = ?, com_star = ?, com_date = now() where com_no = ?
+[DEBUG] [2021-06-18 15:46] ==> Parameters: 테스트2(String), 4(Integer), 60(Integer)
+[DEBUG] [2021-06-18 15:46] <==    Updates: 1
+[DEBUG] [2021-06-18 15:46] res no >> 1
+[DEBUG] [2021-06-18 15:46] test07RemoveComment()
+[DEBUG] [2021-06-18 15:46] ==>  Preparing: delete from comment where com_no = ?
+[DEBUG] [2021-06-18 15:46] ==> Parameters: 60(Integer)
+[DEBUG] [2021-06-18 15:46] <==    Updates: 1
+[DEBUG] [2021-06-18 15:46] res no >> 1
+[DEBUG] [2021-06-18 17:40] test01GetLists()
+[DEBUG] [2021-06-18 17:40] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no
+[DEBUG] [2021-06-18 17:40] ==> Parameters: 
+[TRACE] [2021-06-18 17:40] <==    Columns: com_no, mov_no, mov_title, com_user, com_content, com_star, com_date
+[TRACE] [2021-06-18 17:40] <==        Row: 1, 1, 크루엘라, test@test.com, 재미있음, 4, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 17:40] <==        Row: 2, 1, 크루엘라, test2@test.com, 그저그럼, 3, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 17:40] <==        Row: 3, 1, 크루엘라, test@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 17:40] <==        Row: 4, 1, 크루엘라, test1@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 17:40] <==        Row: 5, 2, 캐시트럭, test@test.com, 재미있음2, 5, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 17:40] <==        Row: 6, 2, 캐시트럭, test@test.com, 그저그럼2, 3, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 17:40] <==        Row: 7, 2, 캐시트럭, test2@test.com, 노잼2, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 17:40] <==        Row: 58, 3, 컨저링3: 악마가 시켰다, tes1@test.com, 재밌게 봤어요, 4, 2021-06-18 15:47:32.0
+[DEBUG] [2021-06-18 17:40] <==      Total: 8
+[DEBUG] [2021-06-18 17:40] Comment [comNo=1, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=재미있음, comStar=4, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 17:40] Comment [comNo=2, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test2@test.com, comContent=그저그럼, comStar=3, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 17:40] Comment [comNo=3, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 17:40] Comment [comNo=4, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test1@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 17:40] Comment [comNo=5, movNo=Movie [movNo=2, movTitle=캐시트럭, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=재미있음2, comStar=5, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 17:40] Comment [comNo=6, movNo=Movie [movNo=2, movTitle=캐시트럭, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=그저그럼2, comStar=3, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 17:40] Comment [comNo=7, movNo=Movie [movNo=2, movTitle=캐시트럭, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test2@test.com, comContent=노잼2, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 17:40] Comment [comNo=58, movNo=Movie [movNo=3, movTitle=컨저링3: 악마가 시켰다, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=tes1@test.com, comContent=재밌게 봤어요, comStar=4, comDate=2021-06-18T15:47:32]
+[DEBUG] [2021-06-18 17:40] test02GetCommentByUser()
+[DEBUG] [2021-06-18 17:40] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no where c.com_user = ?
+[DEBUG] [2021-06-18 17:40] ==> Parameters: test1@test.com(String)
+[TRACE] [2021-06-18 17:40] <==    Columns: com_no, mov_no, mov_title, com_user, com_content, com_star, com_date
+[TRACE] [2021-06-18 17:40] <==        Row: 4, 1, 크루엘라, test1@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[DEBUG] [2021-06-18 17:40] <==      Total: 1
+[DEBUG] [2021-06-18 17:40] Comment [comNo=4, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test1@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 17:40] test03GetCommentByMovNo()
+[DEBUG] [2021-06-18 17:40] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no where m.mov_no = ?
+[DEBUG] [2021-06-18 17:40] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-18 17:40] <==    Columns: com_no, mov_no, mov_title, com_user, com_content, com_star, com_date
+[TRACE] [2021-06-18 17:40] <==        Row: 1, 1, 크루엘라, test@test.com, 재미있음, 4, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 17:40] <==        Row: 2, 1, 크루엘라, test2@test.com, 그저그럼, 3, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 17:40] <==        Row: 3, 1, 크루엘라, test@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[TRACE] [2021-06-18 17:40] <==        Row: 4, 1, 크루엘라, test1@test.com, 노잼, 2, 2021-06-17 12:36:33.0
+[DEBUG] [2021-06-18 17:40] <==      Total: 4
+[DEBUG] [2021-06-18 17:40] Comment [comNo=1, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=재미있음, comStar=4, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 17:40] Comment [comNo=2, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test2@test.com, comContent=그저그럼, comStar=3, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 17:40] Comment [comNo=3, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 17:40] Comment [comNo=4, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test1@test.com, comContent=노잼, comStar=2, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 17:40] test04getCommentByComNo()
+[DEBUG] [2021-06-18 17:40] ==>  Preparing: select c.com_no, m.mov_no, m.mov_title, c.com_user, c.com_content, c.com_star, c.com_date from comment c join movie m on c.mov_no = m.mov_no where c.com_no = ?
+[DEBUG] [2021-06-18 17:40] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-18 17:40] <==    Columns: com_no, mov_no, mov_title, com_user, com_content, com_star, com_date
+[TRACE] [2021-06-18 17:40] <==        Row: 1, 1, 크루엘라, test@test.com, 재미있음, 4, 2021-06-17 12:36:33.0
+[DEBUG] [2021-06-18 17:40] <==      Total: 1
+[DEBUG] [2021-06-18 17:40] Comment [comNo=1, movNo=Movie [movNo=1, movTitle=크루엘라, movGrade=0, movGenre=null, movRuntime=0, movDirector=null, movActor=null, movDetail=null, movOpendate=null, movEnddate=null, movAvgstar=0.0, movPoster=null], comUser=test@test.com, comContent=재미있음, comStar=4, comDate=2021-06-17T12:36:33]
+[DEBUG] [2021-06-18 17:40] test05RegistComment()
+[DEBUG] [2021-06-18 17:40] ==>  Preparing: insert into comment values (null, ?, ?, ?, ?, now())
+[DEBUG] [2021-06-18 17:40] ==> Parameters: 1(Integer), 테스트유저(String), 테스트(String), 3(Integer)
+[DEBUG] [2021-06-18 17:40] <==    Updates: 1
+[DEBUG] [2021-06-18 17:40] ==>  Preparing: SELECT LAST_INSERT_ID()
+[DEBUG] [2021-06-18 17:40] ==> Parameters: 
+[TRACE] [2021-06-18 17:40] <==    Columns: LAST_INSERT_ID()
+[TRACE] [2021-06-18 17:40] <==        Row: 61
+[DEBUG] [2021-06-18 17:40] <==      Total: 1
+[DEBUG] [2021-06-18 17:40] res no >> 1
+[DEBUG] [2021-06-18 17:40] test06ModifyComment()
+[DEBUG] [2021-06-18 17:40] ==>  Preparing: update comment set com_content = ?, com_star = ?, com_date = now() where com_no = ?
+[DEBUG] [2021-06-18 17:40] ==> Parameters: 테스트2(String), 4(Integer), 61(Integer)
+[DEBUG] [2021-06-18 17:40] <==    Updates: 1
+[DEBUG] [2021-06-18 17:40] res no >> 1
+[DEBUG] [2021-06-18 17:40] test07RemoveComment()
+[DEBUG] [2021-06-18 17:40] ==>  Preparing: delete from comment where com_no = ?
+[DEBUG] [2021-06-18 17:40] ==> Parameters: 61(Integer)
+[DEBUG] [2021-06-18 17:40] <==    Updates: 1
+[DEBUG] [2021-06-18 17:40] res no >> 1

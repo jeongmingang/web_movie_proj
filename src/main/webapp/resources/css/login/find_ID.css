@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* Fontawesome 4.7 */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@900&display=swap');
+
+@font-face {
+	font-family: 'IBMPlexSansKR-Regular';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff')
+		 format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'IBMPlexSansKR-Regular', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	margin-right: 17px; /* nav 길이조절 */
+	overflow: hidden; /* 스크롤 x */
+	border: 0 solid #fff;
+}
+
+a:link {
+	text-decoration: none;
+	border: 0 solid #fff;
+}
+
+a:active, a:focus, a:hover {
+	text-decoration: underline;
+	border: 0 solid #fff;
+}
+
+ol, ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border: 0 solid #fff;
+}
+
+/* section */
+section {
+	margin: auto;
+	width: 1273px;
+	text-align: center;
+	margin-right: auto;
+}
+
+/* section 이메일찾기*/
+.findid {
+	width: 150px;
+	height: 300px;
+	margin-left: 28px;
+}
+
+#findform {
+	border: 0 solid #fff;
+	text-align: center;
+	padding: 10%;
+	width: 120px;
+	height: 280px;
+}
+
+#id_img {
+	width: 100px;
+	height: 100px;
+	padding-top: 30px;
+}
+
+input {
+	height: 30px;
+	width: 250px;
+	text-align: center;
+	font-size: 15px;
+}
+
+#id_submit {
+	height: 35px;
+	width: 258px;
+	text-align: center;
+	font-size: 15px;
+	margin-top: 10px;
+	background-color: #3e2789;
+	color: #fff;
+	font-weight: 500 bolder;
+	border: 0 solid #fff;
+}

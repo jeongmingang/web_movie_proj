@@ -1,0 +1,372 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'IBMPlexSansKR-Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@900&display=swap');
+
+/* body */
+body {
+	font-family: 'IBMPlexSansKR-Regular', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-color: RGB(3, 22, 52);
+}
+
+/* header */
+header {
+	margin: auto;
+	width: 1273px;
+	position: relative;
+/* 	margin: 0; */
+}
+
+#header_ci {
+	width: 150px;
+	margin: 0px auto;
+	align-items: center;
+	position: relative;
+	left: 120px;
+	box-sizing: border-box;
+}
+
+#header_ci2 {
+	width: 150px;
+	margin: 0px auto;
+	align-items: center;
+	position: relative;
+	left: 175px;
+	box-sizing: border-box;
+}
+
+header div {
+	display: inline;
+	float: right;
+	text-align: right;
+/* 	padding-bottom: 10px; */
+}
+
+header div a {
+	text-decoration: none;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 1.0em;
+	color: RGB(136, 136, 136);
+}
+
+/* 로그인 성공 영역 */
+.login_success_area {
+	color: RGB(232, 221, 203);
+}
+
+.login_success_area a {
+	color: RGB(136, 136, 136);
+}
+
+.admin_success_area {
+	color: RGB(232, 221, 203);
+}
+
+.admin_success_area a {
+	color: RGB(136, 136, 136);
+}
+
+/* <nav> */
+nav {
+	margin: auto;
+	position: relative;
+	padding: 0px;
+}
+
+nav ul {
+	width: 1273px;
+	padding-left: 0;
+	list-style: none;
+	border-bottom: 0.5px solid RGB(136, 136, 136);
+	padding-bottom: 5px;
+	margin: 10px auto;
+	position: relative;
+}
+
+.nav {
+	display: inline-block;
+	padding: 0 90px;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+#mypagebtn{
+	display: inline-block;
+	padding: 0 0 0 70px;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+.nav a {
+	text-decoration: none;
+	color: RGB(232, 221, 203);
+	padding-bottom: 5px;
+}
+
+.nav a:hover {
+	text-decoration: none;
+	color: RGB(232, 221, 203);
+	padding-bottom: 3px;
+	border-bottom: 5px solid RGB(136, 136, 136);
+}
+
+.fa-user{
+	text-decoration: none;
+	color: RGB(232, 221, 203);
+	display: inline-block;
+}
+
+/* section */
+section {
+	margin: auto;
+	width: 1273px;
+	text-align: center;
+}
+
+#slide{
+	height: 500px;
+	overflow: hidden;
+}
+
+#slide ul{
+	width:calc(100% * 4);display:flex;animation:slide 15s infinite;
+}
+
+#slide li{
+	width:calc(100% / 4);height:500px;
+}
+
+#slide li:nth-child(1) {
+	background-image: url("../images/slide1.jpg");
+	overflow: hidden;
+	background-size: cover;
+	border-radius: 5px;
+}
+
+#slide li:nth-child(2){
+	background-image: url("../images/slide2.jpg");
+	overflow: hidden;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+#slide li:nth-child(3){
+	background-image: url("../images/slide3.jpg");
+	overflow: hidden;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+#slide li:nth-child(4){
+	background-image: url("../images/slide4.jpg");
+	overflow: hidden;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+#slide ul, li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+@keyframes slide {
+      0% {margin-left:0;} /* 0 ~ 10  : 정지 */
+      10% {margin-left:0;} /* 10 ~ 25 : 변이 */
+      25% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
+      35% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
+      50% {margin-left:-200%;}
+      60% {margin-left:-200%;}
+      75% {margin-left:-300%;}
+      85% {margin-left:-300%;}
+      100% {margin-left:0;}
+}
+
+
+
+/* section-contentsBox */
+.contentsBox {
+	text-align: center;
+	margin: 20px auto;
+}
+
+.boxoffice {
+	margin: 100px 0 50px 0;
+}
+
+.boxoffice h1{
+	font-family: 'Bodoni Moda', serif;
+	font-weight: bold;
+	text-decoration: underline;
+	color: white;
+	font-size: 3.0em;
+	margin: 0 auto;
+}
+
+.main-movie-list {
+	overflow: hidden;
+	position: relative;
+	/* z-index: 3; */
+	width: 1280px;
+	height: auto;
+	margin: 0 auto;
+	/* padding: 0 0 80px 0; */
+	float: none;
+}
+
+.main-movie-list ul li{
+	margin: 0 auto;
+	width: 424px;
+}
+
+.main-movie-list ul li img{
+	width: 290px;
+	height: 420px;
+}
+
+
+.reserve-boxoffice {
+	background-color: RGB(86,127,127);
+	padding: 10px;
+	border-radius: 5px;
+	width: 120px;
+	margin: 10px auto;
+}
+
+.reserve-boxoffice a{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	font-weight: 800;
+}
+
+.reserve-boxoffice a:hover{
+	text-decoration: none;
+	color:  RGB(3, 22, 52);
+	font-size: 20px;
+	font-weight: 800;
+}
+
+.search {
+	/* position: relative;  */
+	width: auto;
+	height: 36px;
+	margin: 40px auto;
+/* 	float: none; */
+	text-align: center;
+	background-color: rgba(0,0,0,0.2);
+	color: white;
+}
+
+.search ul li{
+	width: 318px;
+	display: inline-block;
+}
+
+.search h2{
+	margin: 0;
+	display: inline-block;
+}
+
+.search a{
+	color: white;
+}
+
+.search a:hover{
+	color: rgba(255, 255, 255, 0.5);
+}
+
+#search-box div{
+	display: inline-block;
+}
+
+#search-box input[type=text]{
+	margin: 0 0 0 15px;
+	outline: none;
+	width: 200px;
+	height: 35px;
+	padding: 10px;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 2px solid #ddd;
+	background: #fff url("../images/search-icon.png") no-repeat center left 5px;
+	background-size: 23px;
+	padding-left: 35px;
+	background-color: transparent;
+}
+
+.search-box input[type=text]::placeholder{
+	font-style: italic;	
+	transition: 0.5s;
+	color: white;
+}
+
+.search-box input[type=text]:focus::placeholder{
+	opacity: 0;
+}
+
+.input-text{
+	color: white;	
+}
+
+.fa-calendar-alt, .fa-film, .fa-ticket-alt{
+	font-size: 1.2em;
+	margin-right: 10px;
+}
+
+div ul {
+	margin: 0px 0px;
+	padding: 0px 0px;
+}
+
+div ul li {
+	float: left;
+	padding: 0;
+	list-style-type: none;
+	display: inline;
+	height: auto;
+	width: 400px;
+}
+
+/* footer */
+footer {
+	margin: auto;
+	width: 1273px;
+}
+
+#content {
+	border-top: 0.5px solid RGB(136, 136, 136);
+	text-align: left;
+	margin-top: 0;
+}
+
+#textarea{
+	margin-top: 22.5px;
+}
+
+#textarea p{
+/* 	margin-left: 80px; */
+	color: RGB(136, 136, 136);
+	font-size: 0.8em;
+/* 	margin-top: 22.5px; */
+/* 	margin-bottom: 0; */
+	margin: 0;
+}
+
+#footer_ci {
+	width: 100px;
+	margin: 0px;
+	float: left;
+}

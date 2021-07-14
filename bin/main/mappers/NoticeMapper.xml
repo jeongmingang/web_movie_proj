@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="web_movie_proj.mapper.NoticeMapper">
+
+	<resultMap type="Notice" id="noticeList">
+      <id column="not_no" property="notNo" />
+      <result column="not_title" property="notTitle" />
+      <result column="not_date" property="notDate" />
+   </resultMap>
+
+   
+	<select id="selectNoticeAll" resultMap="noticeList">
+      select not_no, not_title, not_date
+      from notice
+      order by not_no desc;
+	</select>
+	
+	<select id="selectNoticeRecent" resultMap="noticeList">
+		select not_no ,not_title ,not_date
+		from notice
+		order by not_date desc
+		limit 10;
+	</select>
+	
+ 	<select id="selectNoticeByDate" resultMap="noticeList">
+		select not_no ,not_title ,not_date
+		from notice
+		where not_date like concat(#{notDate},'%')
+		order by not_no desc;
+	</select>
+	
+	<select id="selectNoticeByTitle" resultMap="noticeList">
+   		select not_no ,not_title ,not_date ,rownum 
+		from (select not_no, not_title, not_date, @rownum:=@rownum+1 as rownum
+			from notice
+			where (@rownum:=0)=0 and not_title like concat('%',#{notTitle},'%')
+			order by not_no desc) 
+		as search
+		having rownum <![CDATA[>=]]> (#{selectPage}-1)*10 + 1 and rownum <![CDATA[<=]]> #{selectPage} * 10;
+	</select>
+
+   <select id="selectNoticeByPage" resultMap="noticeList">
+      SELECT not_no, not_title, not_date
+      FROM notice
+      where not_no between #{totalNumber} - ((#{selectPage} * 10)-1) and #{totalNumber} - ((#{selectPage}-1) * 10)
+      order by not_no desc;
+   </select>
+   
+   <select id="selectNoticeByNo" resultType="Notice">
+      select not_no, not_title, not_detail, not_date, not_file 
+      from notice 
+      where not_no = #{notNo};
+   </select>
+   
+   <select id="countNotice" resultType="int">
+      select count(*)
+	  from notice
+	  where  not_title like concat('%',#{notTitle},'%');
+   </select>
+   
+   <insert id="insertNotice" parameterType="Notice">
+      insert into notice(not_title,not_detail,not_date,not_file)
+      values(#{notTitle},#{notDetail},now(),#{notFile});
+      <selectKey resultType="int" keyProperty="notNo" order="AFTER">
+         select max(not_no) from notice;
+      </selectKey>
+   </insert>
+   
+   <update id="updateNotice" parameterType="Notice">
+      update notice 
+      set not_title = #{notTitle} , not_detail = #{notDetail} , not_file = #{notFile}
+      where not_no = #{notNo};
+   </update>
+   
+   <delete id="deleteNotice">
+      delete
+      from notice
+      where not_no = #{notNo};
+   </delete>
+   
+   <update id="setAutoIncrement"> <!-- auto_increment 초기화 test tearDown 메서드에 사용됨.  -->
+      alter table notice auto_increment = 1; 
+   </update> 
+
+</mapper>

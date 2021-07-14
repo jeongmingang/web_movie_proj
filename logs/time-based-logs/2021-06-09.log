@@ -1,0 +1,274 @@
+[DEBUG] [2021-06-09 11:32] testDataSource()
+[DEBUG] [2021-06-09 11:32] DataSource HikariDataSource (HikariPool-1)
+[DEBUG] [2021-06-09 11:32] LoginTimeout30
+[DEBUG] [2021-06-09 11:33] test01GetLists()
+[DEBUG] [2021-06-09 11:33] ==>  Preparing: select cin_no, cin_row, cin_col, cin_seat, cin_type, cin_adultprice, cin_teenprice, cin_prefprice from cinema
+[DEBUG] [2021-06-09 11:33] ==> Parameters: 
+[TRACE] [2021-06-09 11:33] <==    Columns: cin_no, cin_row, cin_col, cin_seat, cin_type, cin_adultprice, cin_teenprice, cin_prefprice
+[TRACE] [2021-06-09 11:33] <==        Row: 1, 10, 10, 100, 2D, 10000, 8000, 5000
+[TRACE] [2021-06-09 11:33] <==        Row: 2, 8, 9, 72, 3D, 15000, 13000, 10000
+[TRACE] [2021-06-09 11:33] <==        Row: 3, 6, 8, 48, 4D, 20000, 18000, 15000
+[DEBUG] [2021-06-09 11:33] <==      Total: 3
+[DEBUG] [2021-06-09 11:33] service - getLists() > 3
+[DEBUG] [2021-06-09 11:33] Cinema [cinNo=1, cinRow=10, cinCol=10, cinSeat=100, cinType=2D, cinAdultPrice=10000, cinTeenPrice=8000, cinPrefPrice=5000]
+[DEBUG] [2021-06-09 11:33] Cinema [cinNo=2, cinRow=8, cinCol=9, cinSeat=72, cinType=3D, cinAdultPrice=15000, cinTeenPrice=13000, cinPrefPrice=10000]
+[DEBUG] [2021-06-09 11:33] Cinema [cinNo=3, cinRow=6, cinCol=8, cinSeat=48, cinType=4D, cinAdultPrice=20000, cinTeenPrice=18000, cinPrefPrice=15000]
+[DEBUG] [2021-06-09 11:33] test02GetCinema()
+[DEBUG] [2021-06-09 11:33] service - getCinema() > Cinema [cinNo=1, cinRow=0, cinCol=0, cinSeat=0, cinType=null, cinAdultPrice=0, cinTeenPrice=0, cinPrefPrice=0]
+[DEBUG] [2021-06-09 11:33] ==>  Preparing: select cin_no, cin_row, cin_col, cin_seat, cin_type, cin_adultprice, cin_teenprice, cin_prefprice from cinema where cin_no=?
+[DEBUG] [2021-06-09 11:33] ==> Parameters: 1(Integer)
+[TRACE] [2021-06-09 11:33] <==    Columns: cin_no, cin_row, cin_col, cin_seat, cin_type, cin_adultprice, cin_teenprice, cin_prefprice
+[TRACE] [2021-06-09 11:33] <==        Row: 1, 10, 10, 100, 2D, 10000, 8000, 5000
+[DEBUG] [2021-06-09 11:33] <==      Total: 1
+[DEBUG] [2021-06-09 11:33] Cinema [cinNo=1, cinRow=10, cinCol=10, cinSeat=100, cinType=2D, cinAdultPrice=10000, cinTeenPrice=8000, cinPrefPrice=5000]
+[DEBUG] [2021-06-09 16:28] test01GetLists()
+[DEBUG] [2021-06-09 16:28] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater
+[DEBUG] [2021-06-09 16:28] ==> Parameters: 
+[TRACE] [2021-06-09 16:28] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:28] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[TRACE] [2021-06-09 16:28] <==        Row: 3, 대구이시아, 대구광역시 동구 봉무동 팔공로49길 51, 35.92078372990312, 128.6356898243599, test, [ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질
+[TRACE] [2021-06-09 16:28] <==        Row: 4, 북대구(칠곡), 대구광역시 북구 동암로 100, 35.944270157017534, 128.56170906909924, test, 인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심
+[DEBUG] [2021-06-09 16:28] <==      Total: 3
+[DEBUG] [2021-06-09 16:28] service - getLists() > 3
+[DEBUG] [2021-06-09 16:28] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:28] Theater [thtNo=3, thtName=대구이시아, thtAddress=대구광역시 동구 봉무동 팔공로49길 51, thtLat=35.92078372990312, thtLong=128.6356898243599, thtSubs=test, thtDetail=[ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질]
+[DEBUG] [2021-06-09 16:28] Theater [thtNo=4, thtName=북대구(칠곡), thtAddress=대구광역시 북구 동암로 100, thtLat=35.944270157017534, thtLong=128.56170906909924, thtSubs=test, thtDetail=인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심]
+[DEBUG] [2021-06-09 16:28] test02GetTheater()
+[DEBUG] [2021-06-09 16:28] service - getTheater() > Theater [thtNo=2, thtName=null, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:28] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_no = ?
+[DEBUG] [2021-06-09 16:28] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-09 16:28] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:28] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[DEBUG] [2021-06-09 16:28] <==      Total: 1
+[DEBUG] [2021-06-09 16:28] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:28] test03GetTheaterName()
+[DEBUG] [2021-06-09 16:28] service - getTheaterName() > Theater [thtNo=0, thtName=대구신세계%, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:28] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_name like ?
+[DEBUG] [2021-06-09 16:28] ==> Parameters: 대구신세계%(String)
+[TRACE] [2021-06-09 16:28] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:28] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[DEBUG] [2021-06-09 16:28] <==      Total: 1
+[DEBUG] [2021-06-09 16:28] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:29] test01GetLists()
+[DEBUG] [2021-06-09 16:29] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater
+[DEBUG] [2021-06-09 16:29] ==> Parameters: 
+[TRACE] [2021-06-09 16:29] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:29] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[TRACE] [2021-06-09 16:29] <==        Row: 3, 대구이시아, 대구광역시 동구 봉무동 팔공로49길 51, 35.92078372990312, 128.6356898243599, test, [ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질
+[TRACE] [2021-06-09 16:29] <==        Row: 4, 북대구(칠곡), 대구광역시 북구 동암로 100, 35.944270157017534, 128.56170906909924, test, 인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심
+[DEBUG] [2021-06-09 16:29] <==      Total: 3
+[DEBUG] [2021-06-09 16:29] service - getLists() > 3
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=3, thtName=대구이시아, thtAddress=대구광역시 동구 봉무동 팔공로49길 51, thtLat=35.92078372990312, thtLong=128.6356898243599, thtSubs=test, thtDetail=[ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질]
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=4, thtName=북대구(칠곡), thtAddress=대구광역시 북구 동암로 100, thtLat=35.944270157017534, thtLong=128.56170906909924, thtSubs=test, thtDetail=인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심]
+[DEBUG] [2021-06-09 16:29] test02GetTheater()
+[DEBUG] [2021-06-09 16:29] service - getTheater() > Theater [thtNo=2, thtName=null, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:29] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_no = ?
+[DEBUG] [2021-06-09 16:29] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-09 16:29] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:29] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[DEBUG] [2021-06-09 16:29] <==      Total: 1
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:29] test03GetTheaterName()
+[DEBUG] [2021-06-09 16:29] service - getTheaterName() > Theater [thtNo=0, thtName=대구신세계, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:29] test01GetLists()
+[DEBUG] [2021-06-09 16:29] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater
+[DEBUG] [2021-06-09 16:29] ==> Parameters: 
+[TRACE] [2021-06-09 16:29] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:29] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[TRACE] [2021-06-09 16:29] <==        Row: 3, 대구이시아, 대구광역시 동구 봉무동 팔공로49길 51, 35.92078372990312, 128.6356898243599, test, [ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질
+[TRACE] [2021-06-09 16:29] <==        Row: 4, 북대구(칠곡), 대구광역시 북구 동암로 100, 35.944270157017534, 128.56170906909924, test, 인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심
+[DEBUG] [2021-06-09 16:29] <==      Total: 3
+[DEBUG] [2021-06-09 16:29] service - getLists() > 3
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=3, thtName=대구이시아, thtAddress=대구광역시 동구 봉무동 팔공로49길 51, thtLat=35.92078372990312, thtLong=128.6356898243599, thtSubs=test, thtDetail=[ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질]
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=4, thtName=북대구(칠곡), thtAddress=대구광역시 북구 동암로 100, thtLat=35.944270157017534, thtLong=128.56170906909924, thtSubs=test, thtDetail=인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심]
+[DEBUG] [2021-06-09 16:29] test02GetTheater()
+[DEBUG] [2021-06-09 16:29] service - getTheater() > Theater [thtNo=2, thtName=null, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:29] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_no = ?
+[DEBUG] [2021-06-09 16:29] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-09 16:29] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:29] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[DEBUG] [2021-06-09 16:29] <==      Total: 1
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:29] test03GetTheaterName()
+[DEBUG] [2021-06-09 16:29] service - getTheaterName() > Theater [thtNo=0, thtName=대구신세계, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:29] test01GetLists()
+[DEBUG] [2021-06-09 16:29] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater
+[DEBUG] [2021-06-09 16:29] ==> Parameters: 
+[TRACE] [2021-06-09 16:29] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:29] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[TRACE] [2021-06-09 16:29] <==        Row: 3, 대구이시아, 대구광역시 동구 봉무동 팔공로49길 51, 35.92078372990312, 128.6356898243599, test, [ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질
+[TRACE] [2021-06-09 16:29] <==        Row: 4, 북대구(칠곡), 대구광역시 북구 동암로 100, 35.944270157017534, 128.56170906909924, test, 인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심
+[DEBUG] [2021-06-09 16:29] <==      Total: 3
+[DEBUG] [2021-06-09 16:29] service - getLists() > 3
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=3, thtName=대구이시아, thtAddress=대구광역시 동구 봉무동 팔공로49길 51, thtLat=35.92078372990312, thtLong=128.6356898243599, thtSubs=test, thtDetail=[ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질]
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=4, thtName=북대구(칠곡), thtAddress=대구광역시 북구 동암로 100, thtLat=35.944270157017534, thtLong=128.56170906909924, thtSubs=test, thtDetail=인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심]
+[DEBUG] [2021-06-09 16:29] test02GetTheater()
+[DEBUG] [2021-06-09 16:29] service - getTheater() > Theater [thtNo=2, thtName=null, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:29] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_no = ?
+[DEBUG] [2021-06-09 16:29] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-09 16:29] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:29] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[DEBUG] [2021-06-09 16:29] <==      Total: 1
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:29] test03GetTheaterName()
+[DEBUG] [2021-06-09 16:29] service - getTheaterName() > Theater [thtNo=0, thtName=대구신세계%, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:29] test01GetLists()
+[DEBUG] [2021-06-09 16:29] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater
+[DEBUG] [2021-06-09 16:29] ==> Parameters: 
+[TRACE] [2021-06-09 16:29] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:29] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[TRACE] [2021-06-09 16:29] <==        Row: 3, 대구이시아, 대구광역시 동구 봉무동 팔공로49길 51, 35.92078372990312, 128.6356898243599, test, [ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질
+[TRACE] [2021-06-09 16:29] <==        Row: 4, 북대구(칠곡), 대구광역시 북구 동암로 100, 35.944270157017534, 128.56170906909924, test, 인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심
+[DEBUG] [2021-06-09 16:29] <==      Total: 3
+[DEBUG] [2021-06-09 16:29] service - getLists() > 3
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=3, thtName=대구이시아, thtAddress=대구광역시 동구 봉무동 팔공로49길 51, thtLat=35.92078372990312, thtLong=128.6356898243599, thtSubs=test, thtDetail=[ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질]
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=4, thtName=북대구(칠곡), thtAddress=대구광역시 북구 동암로 100, thtLat=35.944270157017534, thtLong=128.56170906909924, thtSubs=test, thtDetail=인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심]
+[DEBUG] [2021-06-09 16:29] test02GetTheater()
+[DEBUG] [2021-06-09 16:29] service - getTheater() > Theater [thtNo=2, thtName=null, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:29] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_no = ?
+[DEBUG] [2021-06-09 16:29] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-09 16:29] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:29] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[DEBUG] [2021-06-09 16:29] <==      Total: 1
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:29] test03GetTheaterName()
+[DEBUG] [2021-06-09 16:29] service - getTheaterName() > Theater [thtNo=0, thtName=대구신세계, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:29] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_name like ?%
+[DEBUG] [2021-06-09 16:29] ==> Parameters: 대구신세계(String)
+[DEBUG] [2021-06-09 16:29] test01GetLists()
+[DEBUG] [2021-06-09 16:29] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater
+[DEBUG] [2021-06-09 16:29] ==> Parameters: 
+[TRACE] [2021-06-09 16:29] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:29] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[TRACE] [2021-06-09 16:29] <==        Row: 3, 대구이시아, 대구광역시 동구 봉무동 팔공로49길 51, 35.92078372990312, 128.6356898243599, test, [ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질
+[TRACE] [2021-06-09 16:29] <==        Row: 4, 북대구(칠곡), 대구광역시 북구 동암로 100, 35.944270157017534, 128.56170906909924, test, 인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심
+[DEBUG] [2021-06-09 16:29] <==      Total: 3
+[DEBUG] [2021-06-09 16:29] service - getLists() > 3
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=3, thtName=대구이시아, thtAddress=대구광역시 동구 봉무동 팔공로49길 51, thtLat=35.92078372990312, thtLong=128.6356898243599, thtSubs=test, thtDetail=[ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질]
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=4, thtName=북대구(칠곡), thtAddress=대구광역시 북구 동암로 100, thtLat=35.944270157017534, thtLong=128.56170906909924, thtSubs=test, thtDetail=인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심]
+[DEBUG] [2021-06-09 16:29] test02GetTheater()
+[DEBUG] [2021-06-09 16:29] service - getTheater() > Theater [thtNo=2, thtName=null, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:29] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_no = ?
+[DEBUG] [2021-06-09 16:29] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-09 16:29] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:29] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[DEBUG] [2021-06-09 16:29] <==      Total: 1
+[DEBUG] [2021-06-09 16:29] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:29] test03GetTheaterName()
+[DEBUG] [2021-06-09 16:29] service - getTheaterName() > Theater [thtNo=0, thtName=대구신세계, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:29] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_name like ?,%
+[DEBUG] [2021-06-09 16:29] ==> Parameters: 대구신세계(String)
+[DEBUG] [2021-06-09 16:30] test01GetLists()
+[DEBUG] [2021-06-09 16:30] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater
+[DEBUG] [2021-06-09 16:30] ==> Parameters: 
+[TRACE] [2021-06-09 16:30] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:30] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[TRACE] [2021-06-09 16:30] <==        Row: 3, 대구이시아, 대구광역시 동구 봉무동 팔공로49길 51, 35.92078372990312, 128.6356898243599, test, [ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질
+[TRACE] [2021-06-09 16:30] <==        Row: 4, 북대구(칠곡), 대구광역시 북구 동암로 100, 35.944270157017534, 128.56170906909924, test, 인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심
+[DEBUG] [2021-06-09 16:30] <==      Total: 3
+[DEBUG] [2021-06-09 16:30] service - getLists() > 3
+[DEBUG] [2021-06-09 16:30] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:30] Theater [thtNo=3, thtName=대구이시아, thtAddress=대구광역시 동구 봉무동 팔공로49길 51, thtLat=35.92078372990312, thtLong=128.6356898243599, thtSubs=test, thtDetail=[ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질]
+[DEBUG] [2021-06-09 16:30] Theater [thtNo=4, thtName=북대구(칠곡), thtAddress=대구광역시 북구 동암로 100, thtLat=35.944270157017534, thtLong=128.56170906909924, thtSubs=test, thtDetail=인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심]
+[DEBUG] [2021-06-09 16:30] test02GetTheater()
+[DEBUG] [2021-06-09 16:30] service - getTheater() > Theater [thtNo=2, thtName=null, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:30] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_no = ?
+[DEBUG] [2021-06-09 16:30] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-09 16:30] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:30] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[DEBUG] [2021-06-09 16:30] <==      Total: 1
+[DEBUG] [2021-06-09 16:30] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:30] test03GetTheaterName()
+[DEBUG] [2021-06-09 16:30] service - getTheaterName() > Theater [thtNo=0, thtName=대구신세계%, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:30] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_name like ?
+[DEBUG] [2021-06-09 16:30] ==> Parameters: 대구신세계%(String)
+[TRACE] [2021-06-09 16:30] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:30] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[DEBUG] [2021-06-09 16:30] <==      Total: 1
+[DEBUG] [2021-06-09 16:30] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:30] test01GetLists()
+[DEBUG] [2021-06-09 16:30] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater
+[DEBUG] [2021-06-09 16:30] ==> Parameters: 
+[TRACE] [2021-06-09 16:30] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:30] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[TRACE] [2021-06-09 16:30] <==        Row: 3, 대구이시아, 대구광역시 동구 봉무동 팔공로49길 51, 35.92078372990312, 128.6356898243599, test, [ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질
+[TRACE] [2021-06-09 16:30] <==        Row: 4, 북대구(칠곡), 대구광역시 북구 동암로 100, 35.944270157017534, 128.56170906909924, test, 인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심
+[DEBUG] [2021-06-09 16:30] <==      Total: 3
+[DEBUG] [2021-06-09 16:30] service - getLists() > 3
+[DEBUG] [2021-06-09 16:30] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:30] Theater [thtNo=3, thtName=대구이시아, thtAddress=대구광역시 동구 봉무동 팔공로49길 51, thtLat=35.92078372990312, thtLong=128.6356898243599, thtSubs=test, thtDetail=[ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질]
+[DEBUG] [2021-06-09 16:30] Theater [thtNo=4, thtName=북대구(칠곡), thtAddress=대구광역시 북구 동암로 100, thtLat=35.944270157017534, thtLong=128.56170906909924, thtSubs=test, thtDetail=인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심]
+[DEBUG] [2021-06-09 16:30] test02GetTheater()
+[DEBUG] [2021-06-09 16:30] service - getTheater() > Theater [thtNo=2, thtName=null, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:30] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_no = ?
+[DEBUG] [2021-06-09 16:30] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-09 16:30] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:30] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[DEBUG] [2021-06-09 16:30] <==      Total: 1
+[DEBUG] [2021-06-09 16:30] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:30] test03GetTheaterName()
+[DEBUG] [2021-06-09 16:30] service - getTheaterName() > Theater [thtNo=0, thtName=대구신세계, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:30] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_name like ?
+[DEBUG] [2021-06-09 16:30] ==> Parameters: 대구신세계(String)
+[DEBUG] [2021-06-09 16:30] <==      Total: 0
+[DEBUG] [2021-06-09 16:30] test01GetLists()
+[DEBUG] [2021-06-09 16:30] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater
+[DEBUG] [2021-06-09 16:30] ==> Parameters: 
+[TRACE] [2021-06-09 16:30] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:30] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[TRACE] [2021-06-09 16:30] <==        Row: 3, 대구이시아, 대구광역시 동구 봉무동 팔공로49길 51, 35.92078372990312, 128.6356898243599, test, [ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질
+[TRACE] [2021-06-09 16:30] <==        Row: 4, 북대구(칠곡), 대구광역시 북구 동암로 100, 35.944270157017534, 128.56170906909924, test, 인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심
+[DEBUG] [2021-06-09 16:30] <==      Total: 3
+[DEBUG] [2021-06-09 16:30] service - getLists() > 3
+[DEBUG] [2021-06-09 16:30] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:30] Theater [thtNo=3, thtName=대구이시아, thtAddress=대구광역시 동구 봉무동 팔공로49길 51, thtLat=35.92078372990312, thtLong=128.6356898243599, thtSubs=test, thtDetail=[ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질]
+[DEBUG] [2021-06-09 16:30] Theater [thtNo=4, thtName=북대구(칠곡), thtAddress=대구광역시 북구 동암로 100, thtLat=35.944270157017534, thtLong=128.56170906909924, thtSubs=test, thtDetail=인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심]
+[DEBUG] [2021-06-09 16:30] test02GetTheater()
+[DEBUG] [2021-06-09 16:30] service - getTheater() > Theater [thtNo=2, thtName=null, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:30] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_no = ?
+[DEBUG] [2021-06-09 16:30] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-09 16:30] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:30] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[DEBUG] [2021-06-09 16:30] <==      Total: 1
+[DEBUG] [2021-06-09 16:30] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:30] test03GetTheaterName()
+[DEBUG] [2021-06-09 16:30] service - getTheaterName() > Theater [thtNo=0, thtName=대구신세계%, thtAddress=null, thtLat=0.0, thtLong=0.0, thtSubs=null, thtDetail=null]
+[DEBUG] [2021-06-09 16:30] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_name like ?
+[DEBUG] [2021-06-09 16:30] ==> Parameters: 대구신세계%(String)
+[TRACE] [2021-06-09 16:30] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:30] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[DEBUG] [2021-06-09 16:30] <==      Total: 1
+[DEBUG] [2021-06-09 16:30] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:58] test01GetLists()
+[DEBUG] [2021-06-09 16:58] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater
+[DEBUG] [2021-06-09 16:58] ==> Parameters: 
+[TRACE] [2021-06-09 16:58] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:58] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[TRACE] [2021-06-09 16:58] <==        Row: 3, 대구이시아, 대구광역시 동구 봉무동 팔공로49길 51, 35.92078372990312, 128.6356898243599, test, [ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질
+[TRACE] [2021-06-09 16:58] <==        Row: 4, 북대구(칠곡), 대구광역시 북구 동암로 100, 35.944270157017534, 128.56170906909924, test, 인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심
+[DEBUG] [2021-06-09 16:58] <==      Total: 3
+[DEBUG] [2021-06-09 16:58] service - getLists() > 3
+[DEBUG] [2021-06-09 16:58] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:58] Theater [thtNo=3, thtName=대구이시아, thtAddress=대구광역시 동구 봉무동 팔공로49길 51, thtLat=35.92078372990312, thtLong=128.6356898243599, thtSubs=test, thtDetail=[ 대구 프리미엄 영화관 ] 전 좌석 리클라이너 설치, 프라이빗한 모션베드 단독룸 보유, 전관 레이저 영사기 대구 최초 도입! 생생하고 선명한 화질]
+[DEBUG] [2021-06-09 16:58] Theater [thtNo=4, thtName=북대구(칠곡), thtAddress=대구광역시 북구 동암로 100, thtLat=35.944270157017534, thtLong=128.56170906909924, thtSubs=test, thtDetail=인구 25만의 자족신도시 대구 칠곡 최초의 멀티플렉스. 쇼핑, 영화, 외식까지 한 번에 즐기는 칠곡 문화의 중심]
+[DEBUG] [2021-06-09 16:58] test02GetTheater()
+[DEBUG] [2021-06-09 16:58] service - getTheater() > 2
+[DEBUG] [2021-06-09 16:58] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_no = ?
+[DEBUG] [2021-06-09 16:58] ==> Parameters: 2(Integer)
+[TRACE] [2021-06-09 16:58] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:58] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[DEBUG] [2021-06-09 16:58] <==      Total: 1
+[DEBUG] [2021-06-09 16:58] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]
+[DEBUG] [2021-06-09 16:58] test03GetTheaterName()
+[DEBUG] [2021-06-09 16:58] service - getTheaterName() > 대구신세계%
+[DEBUG] [2021-06-09 16:58] ==>  Preparing: select tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail from theater where tht_name like ?
+[DEBUG] [2021-06-09 16:58] ==> Parameters: 대구신세계%(String)
+[TRACE] [2021-06-09 16:58] <==    Columns: tht_no, tht_name, tht_address, tht_lat, tht_long, tht_subs, tht_detail
+[TRACE] [2021-06-09 16:58] <==        Row: 2, 대구신세계(동대구), 대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, 35.877686, 128.6294, 일반상영관, 메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.
+[DEBUG] [2021-06-09 16:58] <==      Total: 1
+[DEBUG] [2021-06-09 16:58] Theater [thtNo=2, thtName=대구신세계(동대구), thtAddress=대구 동구 동부로 149 신세계백화점 8~9층 메가박스 대구신세계지점, thtLat=35.877686, thtLong=128.6294, thtSubs=일반상영관, thtDetail=메가박스가 대구 지역 최초로 고화질 영상과 생생한 사운드를 선사하는 기술 특화관 MX관. 전 좌석 가죽시트와 JBL사운드에서 즐기는 일반관으로 총 6개의 상영관을 오픈합니다.]

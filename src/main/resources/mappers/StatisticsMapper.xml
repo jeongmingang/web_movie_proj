@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="web_movie_proj.mapper.StatisticsMapper">
+	
+	<resultMap type="Statistics" id="StatisticsList">
+		<result column="날짜" property="date"></result>
+		<result column="매출" property="data"></result>
+		<result column="관람인원" property="audience"></result>
+	</resultMap>
+		
+	<resultMap type="StatisticsCommand" id="StatisticsCommandList">
+		<result column="영화번호" property="movNo"></result>
+		<result column="영화제목" property="movTitle"></result>
+		<result column="관람인원" property="audience"></result>
+	</resultMap>
+	
+	<select id="selectTotalSales" resultType="int">
+		select sum(res_price)
+		from reservation;
+	</select>
+	
+	
+	<select id="selectSalesByLatestDate" resultMap="StatisticsList">
+		select Date.date as 날짜, sum(매출) as 매출, sum(관람인원) as 관람인원
+		from (select curdate() - interval (last_week.week_interval) day as date
+			from (select 0 as week_interval
+				union all select 1 
+				union all select 2 
+				union all select 3 
+				union all select 4 
+				union all select 5 
+				union all select 6) as last_week) as Date left join (select sum(res_price) as 매출,res_adult + res_teen + res_pref as 관람인원,  res_date from reservation group by res_date) as res 
+			on res.res_date like concat(Date.date,'%')
+			group by 날짜
+			order by 날짜 asc;
+	</select>
+
+	<select id="selectSalesByMonth" resultMap="StatisticsList">
+		select res_date as 날짜, sum(res_price) as 매출, sum(res_adult + res_teen + res_pref) as 관람인원
+			from reservation
+			group by month(res_date)
+		order by res_date asc;
+	</select>
+	
+	<select id="selectAudienceByMovie" resultMap="StatisticsCommandList">
+		select m.mov_no as 영화번호, m.mov_title as 영화제목, sum(r.res_adult + r.res_teen + r.res_pref) as 관람인원
+		from showinfo s join reservation r on s.shw_no = r.shw_no 
+		join movie m on s.mov_no = m.mov_no
+		group by m.mov_no;
+	</select>
+</mapper>

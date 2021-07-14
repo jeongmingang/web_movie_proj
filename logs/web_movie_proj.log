@@ -1,0 +1,26 @@
+[DEBUG] [2021-07-14 09:45] ==>  Preparing: select mem_email, mem_passwd, mem_name from member where mem_email = ?
+[DEBUG] [2021-07-14 09:45] ==> Parameters: test5@test.com(String)
+[TRACE] [2021-07-14 09:45] <==    Columns: mem_email, mem_passwd, mem_name
+[TRACE] [2021-07-14 09:45] <==        Row: test5@test.com, *A4B6157319038724E3560894F7F932C8886EBFCF, 테스트5
+[DEBUG] [2021-07-14 09:45] <==      Total: 1
+[DEBUG] [2021-07-14 09:45] ==>  Preparing: update member set mem_birthdate = ?, mem_name = ?, mem_phone = ? where mem_email = ? and mem_passwd = password(?)
+[DEBUG] [2021-07-14 09:45] ==> Parameters: 2020-07-04(LocalDate), 테스트5(String), 010-1111-1111(String), test5@test.com(String), null
+[DEBUG] [2021-07-14 09:45] <==    Updates: 0
+[DEBUG] [2021-07-14 09:45] ==>  Preparing: select mem_email, mem_passwd, mem_name from member where mem_email = ?
+[DEBUG] [2021-07-14 09:45] ==> Parameters: test5@test.com(String)
+[TRACE] [2021-07-14 09:45] <==    Columns: mem_email, mem_passwd, mem_name
+[TRACE] [2021-07-14 09:45] <==        Row: test5@test.com, *A4B6157319038724E3560894F7F932C8886EBFCF, 테스트5
+[DEBUG] [2021-07-14 09:45] <==      Total: 1
+[DEBUG] [2021-07-14 09:48] ==>  Preparing: select mem_email, mem_passwd, mem_name from member where mem_email = ?
+[DEBUG] [2021-07-14 09:48] ==> Parameters: test5@test.com(String)
+[TRACE] [2021-07-14 09:48] <==    Columns: mem_email, mem_passwd, mem_name
+[TRACE] [2021-07-14 09:48] <==        Row: test5@test.com, *A4B6157319038724E3560894F7F932C8886EBFCF, 테스트
+[DEBUG] [2021-07-14 09:48] <==      Total: 1
+[DEBUG] [2021-07-14 09:48] ==>  Preparing: update member set mem_birthdate = ?, mem_name = ?, mem_phone = ? where mem_email = ? and mem_passwd = password(?)
+[DEBUG] [2021-07-14 09:48] ==> Parameters: 2020-07-04(LocalDate), 테스트5(String), 010-1111-1111(String), test5@test.com(String), null
+[DEBUG] [2021-07-14 09:48] <==    Updates: 0
+[DEBUG] [2021-07-14 09:48] ==>  Preparing: select mem_email, mem_passwd, mem_name from member where mem_email = ?
+[DEBUG] [2021-07-14 09:48] ==> Parameters: test5@test.com(String)
+[TRACE] [2021-07-14 09:48] <==    Columns: mem_email, mem_passwd, mem_name
+[TRACE] [2021-07-14 09:48] <==        Row: test5@test.com, *A4B6157319038724E3560894F7F932C8886EBFCF, 테스트
+[DEBUG] [2021-07-14 09:48] <==      Total: 1

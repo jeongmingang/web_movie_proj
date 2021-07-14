@@ -1,0 +1,304 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'IBMPlexSansKR-Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* body */
+body {
+	font-family: 'IBMPlexSansKR-Regular', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+/* header */
+header {
+	margin: auto;
+	width: 1273px;
+	position: relative;
+}
+
+#header_ci {
+	width: 150px;
+	margin: 0px auto;
+	align-items: center;
+	position: relative;
+	left: 120px;
+	box-sizing: border-box;
+}
+
+header div {
+	display: inline;
+	float: right;
+	text-align: right;
+	padding-bottom: 10px;
+}
+
+header div a {
+	text-decoration: none;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 1.0em;
+	color: RGB(136, 136, 136);
+}
+
+/* <nav> */
+nav {
+	margin: auto;
+	position: relative;
+	padding: 0px;
+}
+
+nav ul {
+	width: 1273px;
+	padding-left: 0;
+	list-style: none;
+	border-bottom: 0.5px solid RGB(3, 22, 52);
+	padding-bottom: 5px;
+	margin: 10px auto;
+	position: relative;
+}
+
+.nav {
+	display: inline-block;
+	padding: 0 90px;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+#mypagebtn {
+	display: inline-block;
+	padding: 0 0 0 70px;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+.nav a {
+	text-decoration: none;
+	color: RGB(3, 22, 52);
+	padding-bottom: 5px;
+}
+
+.nav a:hover {
+	text-decoration: none;
+	color: RGB(3, 22, 52);
+	padding-bottom: 4px;
+	border-bottom: 5px solid RGB(3, 22, 52);
+}
+
+.fa-user {
+	text-decoration: none;
+	color: RGB(3, 22, 52);
+	display: inline-block;
+}
+
+/* section */
+section {
+	margin: 50px auto;
+	width: 1273px;
+	height: 900px;
+	text-align: center;
+}
+
+section h2 {
+	padding-left: 10px;
+	text-align: left;
+}
+
+#container {
+	border: 1px solid #ccc;
+	margin-bottom: 50px;
+	height: 800px;
+}
+
+#title {
+	width: 700px;
+	margin: 50px 0 0 80px;
+}
+
+#container h2{
+	display: inline-block;
+	margin-right: 700px;
+}
+
+#count{
+	background-color: RGB(247,247,247);
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.fas{
+	color: RGB(3, 22, 52);
+	margin: 10px;
+}
+
+#count span{
+	font-size: 1.2em;
+	margin: 35px;
+}
+
+#menubar ul{
+	padding: 0;
+	margin-bottom: 0px;
+	list-style: none;
+	width: 100%;
+}
+
+#menubar ul li{
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	width: 418.3px;
+	height: 30px;
+	border: 1px solid #ccc;
+	text-align: center;
+/* 	border-collapse: collapse; */
+}
+
+#selected{
+	background-color: RGB(3, 22, 52);
+	color: white;
+}
+
+#seat-choice {
+	height: 600px;
+	margin: 0 auto;
+}
+
+#seat-area{
+	padding: 10px;
+	/* margin-top: 30px; */
+	margin-left: 150px;
+	width: 570px;
+	height: 500px;
+	float: left;
+}
+
+#seat-area img{
+	width: 500px;
+	margin: 25px 0px;
+}
+
+#seat-area span{
+	display: inline-block;
+	width: 30px;
+	height: 28px;
+	/* border: 1px solid RGB(3, 22, 52); */
+	margin: 5px;
+}
+
+.reserved {
+	border: 1px solid RGB(3, 22, 52);
+	background-color: gray;
+}
+
+.reserving {
+	border: 1px solid RGB(3, 22, 52);
+	background-color: orange;
+}
+
+.select-seat {
+	border: 1px solid RGB(3, 22, 52);
+}
+
+#hiddenseat{
+	display: inline-block;
+	width: 30px;
+	height: 28px;
+	visibility: hidden;
+}
+
+.matrix {
+	border: 1px solid RGB(255, 255, 255);;
+}
+
+
+#seat-area .select-seat:hover{
+	display: inline-block;
+	width: 30px;
+	height: 28px;
+	border: 1px solid RGB(3, 22, 52);
+	background-color: RGB(3, 22, 52);
+	color: white;
+	cursor: pointer;
+}
+
+.select-seat.active {
+	background-color: RGB(3, 22, 52);
+	color: white;
+}
+
+#seat-info{
+	padding: 10px;
+	width: 340px;
+	height: 500px;
+	float: left;
+	background-color: RGB(3, 22, 52);
+}
+
+#movie-info, #seat-info, #price-info{
+	margin: 50px auto;
+}
+
+#select-info {
+	height: 70px;
+}
+
+#movie-info dt, #seat-info dt, #price-info dt{
+	font-size: 1.5em;
+	font-weight: bold;
+	color: white;
+	text-align: left;
+}
+
+#movie-info dd, #seat-info dd, #price-info dd{
+	font-size: 1.0em;
+	color: white;
+	text-align: left;
+	margin: 0;
+}
+
+#before, #next{
+	display:inline-block;
+	width: 100px;
+	background-color: white;
+	padding: 10px;
+	font-size: 1.2em;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+
+/* footer */
+footer {
+	margin: auto;
+	width: 1273px;
+}
+
+#content {
+	border-top: 0.5px solid RGB(3, 22, 52);
+	text-align: left;
+	margin-top: 0;
+}
+
+#textarea {
+	margin-top: 22.5px;
+}
+
+#textarea p {
+	color: black;
+	font-size: 0.8em;
+	margin: 0;
+}
+
+#footer_ci {
+	width: 100px;
+	margin: 0px;
+	float: left;
+}

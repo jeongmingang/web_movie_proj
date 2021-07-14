@@ -1,0 +1,227 @@
+@charset "UTF-8";
+section{
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+body {
+     overflow: auto;
+    overflow-y: scroll;
+/*     letter-spacing: 0; */
+
+    color: #444;
+    font-weight: 400; 
+}
+
+table {
+    display: table;
+    box-sizing: border-box;
+    border-color: grey;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+div#title-wrap{
+	width:400px;
+	padding: 20px 10px;
+	margin: 0 auto;
+	border-style: solid;
+	border-color: #032252;
+	border-radius: 15px 15px;
+	border-width: 1.5px;
+	
+	/* div 안에 양옆으로 정렬하는 거..  */
+	display: flex;
+	justify-content: space-between; 
+}
+
+div.title {
+    font-weight: 100;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    color: #aaa;
+    font-size: 40px;
+    display: inline-block; 
+    width: 200px;
+    margin: 0 auto;
+}
+
+div.title a{
+	color:#aaa;
+	text-decoration: none;
+}
+
+a.button {
+    text-decoration: none;
+}
+
+h2.tit {
+    padding: 0 0 26px 0;
+    font-size: 1.8666em;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    color: #222;
+}
+button#regdate{
+	margin-top: 20px;
+	width: 80px;
+	height: 45px;
+	font-size: 20px;
+}
+
+textarea#textarea{
+	font-family: 'IBMPlexSansKR-Regular', sans-serif;
+	font-size: 15px;
+}
+p#file{
+	font-size: 15px;
+}
+input.input-text{
+	height:24px;
+	font-size:16px;
+}
+input[name=inqTitle]{
+	width:495px;
+}
+input[name=inqUser]{
+	background-color:#eee;
+}
+
+.btn-image-add{
+	font-size:18px;
+}
+
+#essential{
+	text-align: left;
+	margin-left: 20px;
+	
+}
+
+.container.has-lnb #contents {
+    float: right;
+    width: calc(100% - 260px);
+}
+
+.mb30 {
+    margin-bottom: 30px!important;
+}
+
+.mypage-infomation {
+    position: relative;
+    min-height: 36px;
+    padding-bottom: 10px;
+}
+
+.va-m {
+    vertical-align: middle!important;
+}
+
+
+.dot-list>li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 0;
+    background-color: #503396;
+    width: 3px;
+    height: 3px;
+}
+
+.dot-list>li {
+    position: relative;
+    padding: 0 0 0 8px;
+}
+
+.btn-group.right {
+    text-align: right;
+}
+
+.mypage-infomation .btn-group {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.button {
+    display: inline-block;
+    height: 36px;
+    margin: 0;
+    padding: 0 15px;
+    text-align: center;
+    line-height: 34px;
+    color: #503396;
+    font-weight: 400;
+    border-radius: 4px;
+    font-family: NanumBarunGothic,Dotum,'돋움',sans-serif;
+    text-decoration: none;
+    border: 1px solid #503396;
+    vertical-align: middle;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.button.purple {
+    color: #fff;
+    font-weight: 600;
+    line-height: 36px;
+    border: 0;
+    background: #503396;
+}
+
+.agree-box {
+    border: 1px solid #d8d9db;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.agree-box dl dt {
+    position: relative;
+    padding: 0 30px;
+    border-bottom: 1px solid #d8d9db;
+    height: 50px;
+    line-height: 48px;
+}
+
+.bg-chk {
+    display: inline-block;
+    position: relative;
+}
+
+.mr10 {
+    margin-right: 10px!important;
+}
+
+.agree-box dl dt span.bg-chk {
+    float: left;
+}
+
+.table-wrap {
+    position: relative;
+    border-top: 1px solid #555;
+}
+
+.board-form tbody td, .board-form tbody th {
+    position: relative;
+    height: 50px;
+    padding: 7px 15px;
+    text-align: left;
+    border-bottom: 1px solid #d1d5dd;
+}
+
+.board-form tbody th {
+    background: #f7f8f9;
+}
